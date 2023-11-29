@@ -1,0 +1,13 @@
+D:\Semester_3\ApplicationDevelopment\Labs\MilonciniDamianoLab6\LibraryBook\LibraryBook\bin\Debug\BookDatabase.mdf
+D:\Semester_3\ApplicationDevelopment\Labs\MilonciniDamianoLab6\LibraryBook\LibraryBook\bin\Debug\BookDatabase_log.ldf
+D:\Semester_3\ApplicationDevelopment\Labs\MilonciniDamianoLab6\LibraryBook\LibraryBook\bin\Debug\LibraryBook.exe.config
+D:\Semester_3\ApplicationDevelopment\Labs\MilonciniDamianoLab6\LibraryBook\LibraryBook\bin\Debug\LibraryBook.exe
+D:\Semester_3\ApplicationDevelopment\Labs\MilonciniDamianoLab6\LibraryBook\LibraryBook\bin\Debug\LibraryBook.pdb
+D:\Semester_3\ApplicationDevelopment\Labs\MilonciniDamianoLab6\LibraryBook\LibraryBook\obj\Debug\LibraryBook.csproj.AssemblyReference.cache
+D:\Semester_3\ApplicationDevelopment\Labs\MilonciniDamianoLab6\LibraryBook\LibraryBook\obj\Debug\LibraryBook.csproj.SuggestedBindingRedirects.cache
+D:\Semester_3\ApplicationDevelopment\Labs\MilonciniDamianoLab6\LibraryBook\LibraryBook\obj\Debug\LibraryBook.LibraryBook.resources
+D:\Semester_3\ApplicationDevelopment\Labs\MilonciniDamianoLab6\LibraryBook\LibraryBook\obj\Debug\LibraryBook.Properties.Resources.resources
+D:\Semester_3\ApplicationDevelopment\Labs\MilonciniDamianoLab6\LibraryBook\LibraryBook\obj\Debug\LibraryBook.csproj.GenerateResource.cache
+D:\Semester_3\ApplicationDevelopment\Labs\MilonciniDamianoLab6\LibraryBook\LibraryBook\obj\Debug\LibraryBook.csproj.CoreCompileInputs.cache
+D:\Semester_3\ApplicationDevelopment\Labs\MilonciniDamianoLab6\LibraryBook\LibraryBook\obj\Debug\LibraryBook.exe
+D:\Semester_3\ApplicationDevelopment\Labs\MilonciniDamianoLab6\LibraryBook\LibraryBook\obj\Debug\LibraryBook.pdb
