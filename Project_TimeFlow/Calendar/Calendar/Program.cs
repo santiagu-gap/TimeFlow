@@ -16,7 +16,8 @@ namespace Calendar
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Calendar());
+            Application.Run(new PracticeForm());
+            //Application.Run(new Calendar());
         }
     }
 }

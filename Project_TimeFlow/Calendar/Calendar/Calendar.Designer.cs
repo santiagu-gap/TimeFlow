@@ -46,7 +46,7 @@
             // 
             // daysContainer
             // 
-            this.daysContainer.Location = new System.Drawing.Point(247, 134);
+            this.daysContainer.Location = new System.Drawing.Point(13, 134);
             this.daysContainer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.daysContainer.Name = "daysContainer";
             this.daysContainer.Size = new System.Drawing.Size(2276, 1074);
@@ -56,7 +56,7 @@
             // 
             this.sundayLabel.AutoSize = true;
             this.sundayLabel.Font = new System.Drawing.Font("Candara Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sundayLabel.Location = new System.Drawing.Point(361, 87);
+            this.sundayLabel.Location = new System.Drawing.Point(127, 87);
             this.sundayLabel.Name = "sundayLabel";
             this.sundayLabel.Size = new System.Drawing.Size(81, 28);
             this.sundayLabel.TabIndex = 0;
@@ -66,7 +66,7 @@
             // 
             this.mondayLabel.AutoSize = true;
             this.mondayLabel.Font = new System.Drawing.Font("Candara Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mondayLabel.Location = new System.Drawing.Point(681, 87);
+            this.mondayLabel.Location = new System.Drawing.Point(447, 87);
             this.mondayLabel.Name = "mondayLabel";
             this.mondayLabel.Size = new System.Drawing.Size(90, 28);
             this.mondayLabel.TabIndex = 2;
@@ -76,7 +76,7 @@
             // 
             this.wednesdayLabel.AutoSize = true;
             this.wednesdayLabel.Font = new System.Drawing.Font("Candara Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.wednesdayLabel.Location = new System.Drawing.Point(1299, 87);
+            this.wednesdayLabel.Location = new System.Drawing.Point(1065, 87);
             this.wednesdayLabel.Name = "wednesdayLabel";
             this.wednesdayLabel.Size = new System.Drawing.Size(124, 28);
             this.wednesdayLabel.TabIndex = 4;
@@ -86,7 +86,7 @@
             // 
             this.tuesdayLabel.AutoSize = true;
             this.tuesdayLabel.Font = new System.Drawing.Font("Candara Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tuesdayLabel.Location = new System.Drawing.Point(999, 87);
+            this.tuesdayLabel.Location = new System.Drawing.Point(765, 87);
             this.tuesdayLabel.Name = "tuesdayLabel";
             this.tuesdayLabel.Size = new System.Drawing.Size(90, 28);
             this.tuesdayLabel.TabIndex = 3;
@@ -96,7 +96,7 @@
             // 
             this.fridayLabel.AutoSize = true;
             this.fridayLabel.Font = new System.Drawing.Font("Candara Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fridayLabel.Location = new System.Drawing.Point(1974, 87);
+            this.fridayLabel.Location = new System.Drawing.Point(1740, 87);
             this.fridayLabel.Name = "fridayLabel";
             this.fridayLabel.Size = new System.Drawing.Size(68, 28);
             this.fridayLabel.TabIndex = 6;
@@ -106,7 +106,7 @@
             // 
             this.thursdayLabel.AutoSize = true;
             this.thursdayLabel.Font = new System.Drawing.Font("Candara Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.thursdayLabel.Location = new System.Drawing.Point(1637, 87);
+            this.thursdayLabel.Location = new System.Drawing.Point(1403, 87);
             this.thursdayLabel.Name = "thursdayLabel";
             this.thursdayLabel.Size = new System.Drawing.Size(98, 28);
             this.thursdayLabel.TabIndex = 5;
@@ -116,7 +116,7 @@
             // 
             this.saturdayLabel.AutoSize = true;
             this.saturdayLabel.Font = new System.Drawing.Font("Candara Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saturdayLabel.Location = new System.Drawing.Point(2281, 87);
+            this.saturdayLabel.Location = new System.Drawing.Point(2047, 87);
             this.saturdayLabel.Name = "saturdayLabel";
             this.saturdayLabel.Size = new System.Drawing.Size(95, 28);
             this.saturdayLabel.TabIndex = 7;
@@ -125,7 +125,7 @@
             // monthYearDisplay
             // 
             this.monthYearDisplay.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.monthYearDisplay.Location = new System.Drawing.Point(1192, 18);
+            this.monthYearDisplay.Location = new System.Drawing.Point(958, 18);
             this.monthYearDisplay.Name = "monthYearDisplay";
             this.monthYearDisplay.Size = new System.Drawing.Size(347, 41);
             this.monthYearDisplay.TabIndex = 8;
@@ -135,7 +135,7 @@
             // dayModeButton
             // 
             this.dayModeButton.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dayModeButton.Location = new System.Drawing.Point(2203, 12);
+            this.dayModeButton.Location = new System.Drawing.Point(1943, 12);
             this.dayModeButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dayModeButton.Name = "dayModeButton";
             this.dayModeButton.Size = new System.Drawing.Size(103, 31);
@@ -147,7 +147,7 @@
             // weekModeButton
             // 
             this.weekModeButton.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.weekModeButton.Location = new System.Drawing.Point(2311, 12);
+            this.weekModeButton.Location = new System.Drawing.Point(2051, 12);
             this.weekModeButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.weekModeButton.Name = "weekModeButton";
             this.weekModeButton.Size = new System.Drawing.Size(103, 31);
@@ -159,7 +159,7 @@
             // monthModeButton
             // 
             this.monthModeButton.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.monthModeButton.Location = new System.Drawing.Point(2420, 12);
+            this.monthModeButton.Location = new System.Drawing.Point(2160, 12);
             this.monthModeButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.monthModeButton.Name = "monthModeButton";
             this.monthModeButton.Size = new System.Drawing.Size(103, 31);
@@ -172,7 +172,7 @@
             // 
             this.nextButton.BackColor = System.Drawing.Color.White;
             this.nextButton.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nextButton.Location = new System.Drawing.Point(1554, 12);
+            this.nextButton.Location = new System.Drawing.Point(1320, 12);
             this.nextButton.Name = "nextButton";
             this.nextButton.Size = new System.Drawing.Size(52, 46);
             this.nextButton.TabIndex = 12;
@@ -186,7 +186,7 @@
             // 
             this.previousButton.BackColor = System.Drawing.Color.White;
             this.previousButton.Font = new System.Drawing.Font("Candara", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previousButton.Location = new System.Drawing.Point(1122, 12);
+            this.previousButton.Location = new System.Drawing.Point(888, 12);
             this.previousButton.Name = "previousButton";
             this.previousButton.Size = new System.Drawing.Size(52, 46);
             this.previousButton.TabIndex = 13;
@@ -200,7 +200,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2539, 1262);
+            this.ClientSize = new System.Drawing.Size(2305, 1262);
             this.Controls.Add(this.nextButton);
             this.Controls.Add(this.previousButton);
             this.Controls.Add(this.monthModeButton);
