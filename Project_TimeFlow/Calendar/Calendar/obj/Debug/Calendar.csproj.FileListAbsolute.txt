@@ -70,6 +70,7 @@ E:\Semester_3\ApplicationDevelopment\Project_TimeFlow\Calendar\Calendar\obj\Debu
 E:\Semester_3\ApplicationDevelopment\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.exe
 E:\Semester_3\ApplicationDevelopment\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.pdb
 F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.PracticeForm.resources
+<<<<<<< Updated upstream
 C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.csproj.AssemblyReference.cache
 C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.AddTaskPopUp.resources
 C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.Calendar.resources
@@ -85,6 +86,10 @@ C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Cale
 C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.csproj.CoreCompileInputs.cache
 C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.exe
 C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.pdb
+=======
+F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.logInPage.resources
+F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.usernameRequirements.resources
+>>>>>>> Stashed changes
 C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\bin\Debug\tasksDB.db
 C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\bin\Debug\Calendar.exe.config
 C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\bin\Debug\Calendar.exe
@@ -93,5 +98,26 @@ C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Cale
 C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\bin\Debug\System.Data.SQLite.dll
 C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\bin\Debug\Dapper.xml
 C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\bin\Debug\System.Data.SQLite.xml
+<<<<<<< Updated upstream
 C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.csproj.CopyComplete
 C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.Filter.resources
+=======
+C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.csproj.AssemblyReference.cache
+C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.AddTaskPopUp.resources
+C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.Calendar.resources
+C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.logInPage.resources
+C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.PracticeForm.resources
+C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.Properties.Resources.resources
+C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.TaskPreviewWindow.resources
+C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.UserControlBlankDay.resources
+C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.UserControlDay.resources
+C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.UserControlDayView.resources
+C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.UserControlMonthViewTaskOutput.resources
+C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.UserControlWeekDay.resources
+C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.usernameRequirements.resources
+C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.csproj.GenerateResource.cache
+C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.csproj.CoreCompileInputs.cache
+C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.csproj.CopyComplete
+C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.exe
+C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.pdb
+>>>>>>> Stashed changes
