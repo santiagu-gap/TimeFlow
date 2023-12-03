@@ -1,0 +1,20 @@
+C:\Users\Admin\Downloads\TimeFlow-master\TimeFlow-master\TeamProject\bin\Debug\TeamProject.dll.config
+C:\Users\Admin\Downloads\TimeFlow-master\TimeFlow-master\TeamProject\bin\Debug\TeamProject.dll
+C:\Users\Admin\Downloads\TimeFlow-master\TimeFlow-master\TeamProject\bin\Debug\TeamProject.pdb
+C:\Users\Admin\Downloads\TimeFlow-master\TimeFlow-master\TeamProject\obj\Debug\TeamProject.csproj.AssemblyReference.cache
+C:\Users\Admin\Downloads\TimeFlow-master\TimeFlow-master\TeamProject\obj\Debug\TeamProject.Form2.resources
+C:\Users\Admin\Downloads\TimeFlow-master\TimeFlow-master\TeamProject\obj\Debug\TeamProject.Properties.Resources.resources
+C:\Users\Admin\Downloads\TimeFlow-master\TimeFlow-master\TeamProject\obj\Debug\TeamProject.csproj.GenerateResource.cache
+C:\Users\Admin\Downloads\TimeFlow-master\TimeFlow-master\TeamProject\obj\Debug\TeamProject.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\TimeFlow-master\TimeFlow-master\TeamProject\obj\Debug\TeamProject.dll
+C:\Users\Admin\Downloads\TimeFlow-master\TimeFlow-master\TeamProject\obj\Debug\TeamProject.pdb
+C:\Users\Admin\Downloads\Sidebar & TaskUserControl\TeamProject\bin\Debug\TeamProject.dll.config
+C:\Users\Admin\Downloads\Sidebar & TaskUserControl\TeamProject\bin\Debug\TeamProject.dll
+C:\Users\Admin\Downloads\Sidebar & TaskUserControl\TeamProject\bin\Debug\TeamProject.pdb
+C:\Users\Admin\Downloads\Sidebar & TaskUserControl\TeamProject\obj\Debug\TeamProject.csproj.AssemblyReference.cache
+C:\Users\Admin\Downloads\Sidebar & TaskUserControl\TeamProject\obj\Debug\TeamProject.Form2.resources
+C:\Users\Admin\Downloads\Sidebar & TaskUserControl\TeamProject\obj\Debug\TeamProject.Properties.Resources.resources
+C:\Users\Admin\Downloads\Sidebar & TaskUserControl\TeamProject\obj\Debug\TeamProject.csproj.GenerateResource.cache
+C:\Users\Admin\Downloads\Sidebar & TaskUserControl\TeamProject\obj\Debug\TeamProject.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\Sidebar & TaskUserControl\TeamProject\obj\Debug\TeamProject.dll
+C:\Users\Admin\Downloads\Sidebar & TaskUserControl\TeamProject\obj\Debug\TeamProject.pdb
