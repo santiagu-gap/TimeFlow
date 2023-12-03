@@ -100,7 +100,7 @@ namespace Calendar
             username = logInUsernameTextBox.Text;
             password = logInPasswordTextBox.Text;
 
-            if (true) //(VerifyUser(username, password))
+            if (VerifyUser(username, password)) //(true) 
             {
                 loadForm(new PracticeForm());
             }
