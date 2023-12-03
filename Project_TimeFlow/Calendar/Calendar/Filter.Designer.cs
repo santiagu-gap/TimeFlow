@@ -33,6 +33,8 @@
             this.addCategoryButton = new System.Windows.Forms.Label();
             this.categoriesList = new System.Windows.Forms.CheckedListBox();
             this.CategoryListLabel = new System.Windows.Forms.Label();
+            this.PriorityLabel = new System.Windows.Forms.Label();
+            this.PriorityBox = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // deleteCategoryButton
@@ -73,7 +75,7 @@
             this.categoriesList.FormattingEnabled = true;
             this.categoriesList.Location = new System.Drawing.Point(24, 52);
             this.categoriesList.Name = "categoriesList";
-            this.categoriesList.Size = new System.Drawing.Size(404, 319);
+            this.categoriesList.Size = new System.Drawing.Size(404, 169);
             this.categoriesList.TabIndex = 11;
             // 
             // CategoryListLabel
@@ -86,11 +88,31 @@
             this.CategoryListLabel.TabIndex = 10;
             this.CategoryListLabel.Text = "Category List";
             // 
+            // PriorityLabel
+            // 
+            this.PriorityLabel.AutoSize = true;
+            this.PriorityLabel.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PriorityLabel.Location = new System.Drawing.Point(20, 237);
+            this.PriorityLabel.Name = "PriorityLabel";
+            this.PriorityLabel.Size = new System.Drawing.Size(58, 19);
+            this.PriorityLabel.TabIndex = 15;
+            this.PriorityLabel.Text = "Priority";
+            // 
+            // PriorityBox
+            // 
+            this.PriorityBox.FormattingEnabled = true;
+            this.PriorityBox.Location = new System.Drawing.Point(24, 272);
+            this.PriorityBox.Name = "PriorityBox";
+            this.PriorityBox.Size = new System.Drawing.Size(404, 94);
+            this.PriorityBox.TabIndex = 16;
+            // 
             // Filter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 394);
+            this.ClientSize = new System.Drawing.Size(450, 386);
+            this.Controls.Add(this.PriorityBox);
+            this.Controls.Add(this.PriorityLabel);
             this.Controls.Add(this.deleteCategoryButton);
             this.Controls.Add(this.newCategoryName);
             this.Controls.Add(this.addCategoryButton);
@@ -111,5 +133,7 @@
         private System.Windows.Forms.Label addCategoryButton;
         private System.Windows.Forms.CheckedListBox categoriesList;
         private System.Windows.Forms.Label CategoryListLabel;
+        private System.Windows.Forms.Label PriorityLabel;
+        private System.Windows.Forms.CheckedListBox PriorityBox;
     }
 }

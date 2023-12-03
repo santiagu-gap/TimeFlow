@@ -20,6 +20,7 @@ namespace Calendar
         public Filter()
         {
             InitializeComponent();
+            LoadCheckStates();
         }
 
         private void Filter_Load(object sender, EventArgs e)
@@ -53,6 +54,20 @@ namespace Calendar
                 }
             }
             categoriesList.ItemCheck += CategoriesList_ItemCheck;
+            PriorityBox.ItemCheck += PriorityBox_ItemCheck;
+
+            PriorityBox.Items.Add("Unlabeled");
+            PriorityBox.Items.Add("Important - Urgent");
+            PriorityBox.Items.Add("Important - Not Urgent");
+            PriorityBox.Items.Add("Not Important - Urgent");
+            PriorityBox.Items.Add("Not Important - Not Urgent");
+
+            if (PriorityBox.Items.Count > 0)
+            {
+                PriorityBox.ItemCheck -= PriorityBox_ItemCheck; // Unsubscribe temporarily to avoid event triggering
+                LoadCheckStates();
+                PriorityBox.ItemCheck += PriorityBox_ItemCheck; // Subscribe back to the event
+            }
         }
 
         private void CategoriesList_ItemCheck(object sender, ItemCheckEventArgs e)
@@ -155,6 +170,55 @@ namespace Calendar
                 categoryIdMap.Remove(categoryName + userId);
             }
         }
+
+        private void PriorityBox_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            // Update the corresponding boolean variable based on the clicked item
+            switch (PriorityBox.Items[e.Index].ToString())
+            {
+                case "Unlabeled":
+                    UserControlDay.UnlabeledPriority = (e.NewValue == CheckState.Checked);
+                    break;
+                case "Important - Urgent":
+                    UserControlDay.Priority1 = (e.NewValue == CheckState.Checked);
+                    break;
+                case "Important - Not Urgent":
+                    UserControlDay.Priority2 = (e.NewValue == CheckState.Checked);
+                    break;
+                case "Not Important - Urgent":
+                    UserControlDay.Priority3 = (e.NewValue == CheckState.Checked);
+                    break;
+                case "Not Important - Not Urgent":
+                    UserControlDay.Priority4 = (e.NewValue == CheckState.Checked);
+                    break;
+            }
+        }
+
+        private void LoadCheckStates()
+{
+    if (PriorityBox.Items.Count > 0)
+    {
+        // Unsubscribe temporarily to avoid event triggering
+        PriorityBox.ItemCheck -= PriorityBox_ItemCheck;
+
+        SetCheckState(UserControlDay.UnlabeledPriority, 0);
+        SetCheckState(UserControlDay.Priority1, 1);
+        SetCheckState(UserControlDay.Priority2, 2);
+        SetCheckState(UserControlDay.Priority3, 3);
+        SetCheckState(UserControlDay.Priority4, 4);
+
+        // Subscribe back to the event
+        PriorityBox.ItemCheck += PriorityBox_ItemCheck;
+    }
+}
+
+private void SetCheckState(bool state, int index)
+{
+    if (index < PriorityBox.Items.Count)
+    {
+        PriorityBox.SetItemChecked(index, state);
+    }
+}
 
     }
 }
