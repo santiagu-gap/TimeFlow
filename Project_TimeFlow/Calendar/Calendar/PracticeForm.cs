@@ -236,5 +236,10 @@ namespace Calendar
             control.Region = new Region(path);
         }
 
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            PriorityMatrix matrix = new PriorityMatrix();
+            matrix.Show();
+        }
     }
 }

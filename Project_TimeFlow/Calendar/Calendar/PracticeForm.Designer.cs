@@ -75,9 +75,10 @@
             // formContainer
             // 
             this.formContainer.BackColor = System.Drawing.SystemColors.Control;
-            this.formContainer.Location = new System.Drawing.Point(181, -1);
+            this.formContainer.Location = new System.Drawing.Point(136, -1);
+            this.formContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.formContainer.Name = "formContainer";
-            this.formContainer.Size = new System.Drawing.Size(1724, 1032);
+            this.formContainer.Size = new System.Drawing.Size(1293, 838);
             this.formContainer.TabIndex = 1;
             // 
             // sidebarFlowPanel
@@ -93,10 +94,10 @@
             this.sidebarFlowPanel.Controls.Add(this.subContainerPanel);
             this.sidebarFlowPanel.Location = new System.Drawing.Point(0, 2);
             this.sidebarFlowPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.sidebarFlowPanel.MaximumSize = new System.Drawing.Size(217, 1259);
-            this.sidebarFlowPanel.MinimumSize = new System.Drawing.Size(70, 200);
+            this.sidebarFlowPanel.MaximumSize = new System.Drawing.Size(163, 1023);
+            this.sidebarFlowPanel.MinimumSize = new System.Drawing.Size(52, 162);
             this.sidebarFlowPanel.Name = "sidebarFlowPanel";
-            this.sidebarFlowPanel.Size = new System.Drawing.Size(174, 1030);
+            this.sidebarFlowPanel.Size = new System.Drawing.Size(130, 837);
             this.sidebarFlowPanel.TabIndex = 2;
             // 
             // flowLayoutPanel2
@@ -112,9 +113,10 @@
             // 
             this.panel1.Controls.Add(this.menuLabel);
             this.panel1.Controls.Add(this.menuIcon);
-            this.panel1.Location = new System.Drawing.Point(3, 7);
+            this.panel1.Location = new System.Drawing.Point(2, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(215, 64);
+            this.panel1.Size = new System.Drawing.Size(161, 52);
             this.panel1.TabIndex = 5;
             // 
             // menuLabel
@@ -122,10 +124,10 @@
             this.menuLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.menuLabel.Font = new System.Drawing.Font("Candara", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuLabel.ForeColor = System.Drawing.Color.White;
-            this.menuLabel.Location = new System.Drawing.Point(62, 11);
+            this.menuLabel.Location = new System.Drawing.Point(46, 9);
             this.menuLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.menuLabel.Name = "menuLabel";
-            this.menuLabel.Size = new System.Drawing.Size(78, 30);
+            this.menuLabel.Size = new System.Drawing.Size(58, 24);
             this.menuLabel.TabIndex = 1;
             this.menuLabel.Text = "Menu";
             this.menuLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -134,10 +136,10 @@
             // 
             this.menuIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.menuIcon.Image = ((System.Drawing.Image)(resources.GetObject("menuIcon.Image")));
-            this.menuIcon.Location = new System.Drawing.Point(11, 6);
+            this.menuIcon.Location = new System.Drawing.Point(8, 5);
             this.menuIcon.Margin = new System.Windows.Forms.Padding(2);
             this.menuIcon.Name = "menuIcon";
-            this.menuIcon.Size = new System.Drawing.Size(40, 40);
+            this.menuIcon.Size = new System.Drawing.Size(30, 32);
             this.menuIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.menuIcon.TabIndex = 0;
             this.menuIcon.TabStop = false;
@@ -149,10 +151,10 @@
             // 
             this.homePanel.Controls.Add(this.homeLabel);
             this.homePanel.Controls.Add(this.homeIcon);
-            this.homePanel.Location = new System.Drawing.Point(2, 76);
+            this.homePanel.Location = new System.Drawing.Point(2, 62);
             this.homePanel.Margin = new System.Windows.Forms.Padding(2);
             this.homePanel.Name = "homePanel";
-            this.homePanel.Size = new System.Drawing.Size(215, 64);
+            this.homePanel.Size = new System.Drawing.Size(161, 52);
             this.homePanel.TabIndex = 1;
             this.homePanel.Click += new System.EventHandler(this.homeIcon_Click);
             this.homePanel.MouseEnter += new System.EventHandler(this.mouseEnterEvent);
@@ -163,10 +165,10 @@
             this.homeLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.homeLabel.Font = new System.Drawing.Font("Candara", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(197)))), ((int)(((byte)(249)))));
-            this.homeLabel.Location = new System.Drawing.Point(63, 17);
+            this.homeLabel.Location = new System.Drawing.Point(47, 14);
             this.homeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.homeLabel.Name = "homeLabel";
-            this.homeLabel.Size = new System.Drawing.Size(96, 30);
+            this.homeLabel.Size = new System.Drawing.Size(72, 24);
             this.homeLabel.TabIndex = 2;
             this.homeLabel.Text = "Home";
             this.homeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -178,10 +180,10 @@
             // 
             this.homeIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.homeIcon.Image = ((System.Drawing.Image)(resources.GetObject("homeIcon.Image")));
-            this.homeIcon.Location = new System.Drawing.Point(12, 11);
+            this.homeIcon.Location = new System.Drawing.Point(9, 9);
             this.homeIcon.Margin = new System.Windows.Forms.Padding(2);
             this.homeIcon.Name = "homeIcon";
-            this.homeIcon.Size = new System.Drawing.Size(40, 40);
+            this.homeIcon.Size = new System.Drawing.Size(30, 32);
             this.homeIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.homeIcon.TabIndex = 2;
             this.homeIcon.TabStop = false;
@@ -193,10 +195,10 @@
             // 
             this.taskPanel.Controls.Add(this.tasksLabel);
             this.taskPanel.Controls.Add(this.taskIcon);
-            this.taskPanel.Location = new System.Drawing.Point(2, 144);
+            this.taskPanel.Location = new System.Drawing.Point(2, 118);
             this.taskPanel.Margin = new System.Windows.Forms.Padding(2);
             this.taskPanel.Name = "taskPanel";
-            this.taskPanel.Size = new System.Drawing.Size(215, 64);
+            this.taskPanel.Size = new System.Drawing.Size(161, 52);
             this.taskPanel.TabIndex = 3;
             this.taskPanel.Click += new System.EventHandler(this.taskIcon_Click);
             this.taskPanel.MouseEnter += new System.EventHandler(this.mouseEnterEvent);
@@ -207,10 +209,10 @@
             this.tasksLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tasksLabel.Font = new System.Drawing.Font("Candara", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tasksLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(197)))), ((int)(((byte)(249)))));
-            this.tasksLabel.Location = new System.Drawing.Point(63, 18);
+            this.tasksLabel.Location = new System.Drawing.Point(47, 15);
             this.tasksLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.tasksLabel.Name = "tasksLabel";
-            this.tasksLabel.Size = new System.Drawing.Size(96, 30);
+            this.tasksLabel.Size = new System.Drawing.Size(72, 24);
             this.tasksLabel.TabIndex = 3;
             this.tasksLabel.Text = "Tasks";
             this.tasksLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -222,10 +224,10 @@
             // 
             this.taskIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.taskIcon.Image = ((System.Drawing.Image)(resources.GetObject("taskIcon.Image")));
-            this.taskIcon.Location = new System.Drawing.Point(12, 13);
+            this.taskIcon.Location = new System.Drawing.Point(9, 11);
             this.taskIcon.Margin = new System.Windows.Forms.Padding(2);
             this.taskIcon.Name = "taskIcon";
-            this.taskIcon.Size = new System.Drawing.Size(40, 40);
+            this.taskIcon.Size = new System.Drawing.Size(30, 32);
             this.taskIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.taskIcon.TabIndex = 3;
             this.taskIcon.TabStop = false;
@@ -237,9 +239,10 @@
             // 
             this.calendarPanel.Controls.Add(this.calendarLabel);
             this.calendarPanel.Controls.Add(this.calendarIcon);
-            this.calendarPanel.Location = new System.Drawing.Point(3, 213);
+            this.calendarPanel.Location = new System.Drawing.Point(2, 174);
+            this.calendarPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.calendarPanel.Name = "calendarPanel";
-            this.calendarPanel.Size = new System.Drawing.Size(215, 64);
+            this.calendarPanel.Size = new System.Drawing.Size(161, 52);
             this.calendarPanel.TabIndex = 4;
             this.calendarPanel.Click += new System.EventHandler(this.calendarButton_Click);
             this.calendarPanel.MouseEnter += new System.EventHandler(this.mouseEnterEvent);
@@ -250,10 +253,10 @@
             this.calendarLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.calendarLabel.Font = new System.Drawing.Font("Candara", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calendarLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(197)))), ((int)(((byte)(249)))));
-            this.calendarLabel.Location = new System.Drawing.Point(62, 17);
+            this.calendarLabel.Location = new System.Drawing.Point(46, 14);
             this.calendarLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.calendarLabel.Name = "calendarLabel";
-            this.calendarLabel.Size = new System.Drawing.Size(123, 30);
+            this.calendarLabel.Size = new System.Drawing.Size(92, 24);
             this.calendarLabel.TabIndex = 4;
             this.calendarLabel.Text = "Calendar";
             this.calendarLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -265,10 +268,10 @@
             // 
             this.calendarIcon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.calendarIcon.Image = ((System.Drawing.Image)(resources.GetObject("calendarIcon.Image")));
-            this.calendarIcon.Location = new System.Drawing.Point(11, 11);
+            this.calendarIcon.Location = new System.Drawing.Point(8, 9);
             this.calendarIcon.Margin = new System.Windows.Forms.Padding(2);
             this.calendarIcon.Name = "calendarIcon";
-            this.calendarIcon.Size = new System.Drawing.Size(40, 40);
+            this.calendarIcon.Size = new System.Drawing.Size(30, 32);
             this.calendarIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.calendarIcon.TabIndex = 4;
             this.calendarIcon.TabStop = false;
@@ -280,9 +283,10 @@
             // 
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox4);
-            this.panel2.Location = new System.Drawing.Point(3, 283);
+            this.panel2.Location = new System.Drawing.Point(2, 230);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(215, 64);
+            this.panel2.Size = new System.Drawing.Size(161, 52);
             this.panel2.TabIndex = 5;
             // 
             // label1
@@ -290,10 +294,10 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.Font = new System.Drawing.Font("Candara", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(197)))), ((int)(((byte)(249)))));
-            this.label1.Location = new System.Drawing.Point(62, 17);
+            this.label1.Location = new System.Drawing.Point(46, 14);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 30);
+            this.label1.Size = new System.Drawing.Size(92, 24);
             this.label1.TabIndex = 4;
             this.label1.Text = "Matrix";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -302,32 +306,34 @@
             // 
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(9, 10);
+            this.pictureBox4.Location = new System.Drawing.Point(7, 8);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(45, 45);
+            this.pictureBox4.Size = new System.Drawing.Size(34, 37);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 4;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // subContainerPanel
             // 
             this.subContainerPanel.Controls.Add(this.pictureBox3);
             this.subContainerPanel.Controls.Add(this.pictureBox2);
             this.subContainerPanel.Controls.Add(this.pictureBox1);
-            this.subContainerPanel.Location = new System.Drawing.Point(3, 353);
+            this.subContainerPanel.Location = new System.Drawing.Point(2, 286);
+            this.subContainerPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.subContainerPanel.Name = "subContainerPanel";
-            this.subContainerPanel.Size = new System.Drawing.Size(168, 677);
+            this.subContainerPanel.Size = new System.Drawing.Size(126, 550);
             this.subContainerPanel.TabIndex = 6;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(17, 522);
+            this.pictureBox3.Location = new System.Drawing.Point(13, 424);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(30, 30);
+            this.pictureBox3.Size = new System.Drawing.Size(22, 24);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
@@ -336,10 +342,10 @@
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(11, 571);
+            this.pictureBox2.Location = new System.Drawing.Point(8, 464);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox2.Size = new System.Drawing.Size(30, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
@@ -348,10 +354,10 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(11, 628);
+            this.pictureBox1.Location = new System.Drawing.Point(8, 510);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.Size = new System.Drawing.Size(30, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -360,8 +366,9 @@
             // 
             this.containerPanel.Controls.Add(this.sidebarFlowPanel);
             this.containerPanel.Location = new System.Drawing.Point(1, -1);
+            this.containerPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.containerPanel.Name = "containerPanel";
-            this.containerPanel.Size = new System.Drawing.Size(174, 1035);
+            this.containerPanel.Size = new System.Drawing.Size(130, 841);
             this.containerPanel.TabIndex = 0;
             // 
             // sidebarTimer
@@ -371,11 +378,12 @@
             // 
             // PracticeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.ClientSize = new System.Drawing.Size(1426, 839);
             this.Controls.Add(this.formContainer);
             this.Controls.Add(this.containerPanel);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PracticeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PracticeForm";
