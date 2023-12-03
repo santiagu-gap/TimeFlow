@@ -93,13 +93,69 @@ namespace Calendar
             popUp.Show();
         }
 
+        /* public void displayTasks()
+         {
+             using (SQLiteConnection connection = new SQLiteConnection(sqlConnection))
+             {
+                 connection.Open();
+
+                 String sql = "SELECT * FROM Task WHERE TaskDate = ?";
+
+                 using (SQLiteCommand cmd = new SQLiteCommand(sql, connection))
+                 {
+                     cmd.Parameters.AddWithValue("TaskDate", Calendar.staticMonth + "/" + dayNumberLabel.Text + "/" + Calendar.staticYear);
+
+                     using (SQLiteDataReader reader = cmd.ExecuteReader())
+                     {
+                         if (reader.HasRows)
+                         {
+                             while (reader.Read() && tasksOutputted <= 4)
+                             {
+                                 switch (tasksOutputted)
+                                 {
+                                     case 1:
+                                         taskLabel1.Text = reader["TaskName"].ToString();
+                                         //taskLabel1.BackColor = Color.FromArgb(100, Color.DarkRed);
+                                         taskLabel1.BackColor = Color.FromArgb(100, Color.LightGray);
+                                         //taskLabel1.Update();
+                                         taskOneLoaded = true;
+                                         break;
+                                     case 2:
+                                         taskLabel2.Text = reader["TaskName"].ToString();
+
+                                         //taskLabel2.BackColor = Color.FromArgb(100, Color.Coral);
+                                         taskLabel2.BackColor = Color.FromArgb(100, Color.LightGray);
+                                         taskTwoLoaded = true;
+                                         break;
+                                     case 3:
+                                         taskLabel3.Text = reader["TaskName"].ToString();
+                                         //taskLabel3.BackColor = Color.FromArgb(100, Color.SpringGreen);
+                                         taskLabel3.BackColor = Color.FromArgb(100, Color.LightGray);
+                                         taskThreeLoaded = true;
+                                         break;
+                                     case 4:
+                                         taskLabel4.Text = reader["TaskName"].ToString();
+                                         //taskLabel4.BackColor = Color.FromArgb(100, Color.Aqua);
+                                         taskLabel4.BackColor = Color.FromArgb(100, Color.LightGray);
+                                         taskFourLoaded = true;
+                                         break;
+
+                                 }
+                                 tasksOutputted++;
+                             }
+                         }
+                     }
+                 }
+             }
+         }*/
+
         public void displayTasks()
         {
             using (SQLiteConnection connection = new SQLiteConnection(sqlConnection))
             {
                 connection.Open();
 
-                String sql = "SELECT * FROM Task WHERE TaskDate = ?";
+                String sql = "SELECT TaskName, Category FROM Task WHERE TaskDate = ?";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(sql, connection))
                 {
@@ -111,43 +167,76 @@ namespace Calendar
                         {
                             while (reader.Read() && tasksOutputted <= 4)
                             {
-                                switch (tasksOutputted)
-                                {
-                                    case 1:
-                                        taskLabel1.Text = reader["TaskName"].ToString();
-                                        //taskLabel1.BackColor = Color.FromArgb(100, Color.DarkRed);
-                                        taskLabel1.BackColor = Color.FromArgb(100, Color.LightGray);
-                                        //taskLabel1.Update();
-                                        taskOneLoaded = true;
-                                        break;
-                                    case 2:
-                                        taskLabel2.Text = reader["TaskName"].ToString();
-                                        
-                                        //taskLabel2.BackColor = Color.FromArgb(100, Color.Coral);
-                                        taskLabel2.BackColor = Color.FromArgb(100, Color.LightGray);
-                                        taskTwoLoaded = true;
-                                        break;
-                                    case 3:
-                                        taskLabel3.Text = reader["TaskName"].ToString();
-                                        //taskLabel3.BackColor = Color.FromArgb(100, Color.SpringGreen);
-                                        taskLabel3.BackColor = Color.FromArgb(100, Color.LightGray);
-                                        taskThreeLoaded = true;
-                                        break;
-                                    case 4:
-                                        taskLabel4.Text = reader["TaskName"].ToString();
-                                        //taskLabel4.BackColor = Color.FromArgb(100, Color.Aqua);
-                                        taskLabel4.BackColor = Color.FromArgb(100, Color.LightGray);
-                                        taskFourLoaded = true;
-                                        break;
+                                string taskName = reader["TaskName"].ToString();
+                                string category = reader["Category"].ToString();
 
+                                if (string.IsNullOrEmpty(category) || IsCategoryChecked(category))
+                                {
+                                    DisplayTask(taskName);
+                                    tasksOutputted++;
                                 }
-                                tasksOutputted++;
                             }
                         }
                     }
                 }
             }
         }
+
+        private bool IsCategoryChecked(string categoryName)
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(sqlConnection))
+            {
+                connection.Open();
+
+                String sql = "SELECT IsChecked FROM Categories WHERE CategoryID = @CategoryName";
+
+                using (SQLiteCommand cmd = new SQLiteCommand(sql, connection))
+                {
+                    cmd.Parameters.AddWithValue("@CategoryName", categoryName);
+
+                    object result = cmd.ExecuteScalar();
+
+                    if (result != null && result != DBNull.Value)
+                    {
+                        int isChecked;
+                        if (int.TryParse(result.ToString(), out isChecked))
+                        {
+                            return isChecked == 1;
+                        }
+                    } 
+                }
+            }
+
+            return false;
+        }
+
+        private void DisplayTask(string taskName)
+        {
+            switch (tasksOutputted)
+            {
+                case 1:
+                    taskLabel1.Text = taskName;
+                    taskLabel1.BackColor = Color.FromArgb(100, Color.LightGray);
+                    taskOneLoaded = true;
+                    break;
+                case 2:
+                    taskLabel2.Text = taskName;
+                    taskLabel2.BackColor = Color.FromArgb(100, Color.LightGray);
+                    taskTwoLoaded = true;
+                    break;
+                case 3:
+                    taskLabel3.Text = taskName;
+                    taskLabel3.BackColor = Color.FromArgb(100, Color.LightGray);
+                    taskThreeLoaded = true;
+                    break;
+                case 4:
+                    taskLabel4.Text = taskName;
+                    taskLabel4.BackColor = Color.FromArgb(100, Color.LightGray);
+                    taskFourLoaded = true;
+                    break;
+            }
+        }
+
 
         public void UpdateTaskLabel(string taskName)
         {

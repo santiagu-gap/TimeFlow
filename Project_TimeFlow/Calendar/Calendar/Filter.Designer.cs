@@ -98,6 +98,7 @@
             this.Controls.Add(this.CategoryListLabel);
             this.Name = "Filter";
             this.Text = "Filter";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Filter_FormClosing);
             this.Load += new System.EventHandler(this.Filter_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

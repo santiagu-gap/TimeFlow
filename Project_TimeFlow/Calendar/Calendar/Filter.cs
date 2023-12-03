@@ -27,7 +27,7 @@ namespace Calendar
             {
                 connection.Open();
 
-                String sql = "SELECT CategoryName FROM Categories";
+                String sql = "SELECT CategoryName, isChecked FROM Categories";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(sql, connection))
                 {
@@ -35,15 +35,50 @@ namespace Calendar
                     {
                         while (reader.Read())
                         {
-                            // Assuming that "CategoryName" is a column in the "Categories" table
                             string categoryName = reader["CategoryName"].ToString();
+                            int isChecked = Convert.ToInt32(reader["isChecked"]);
 
                             // Add the category name to the checkedListBox
-                            categoriesList.Items.Add(categoryName);
+                            int index = categoriesList.Items.Add(categoryName);
+
+                            // Set the checked state based on the value of isChecked
+                            categoriesList.SetItemChecked(index, isChecked == 1);
                         }
                     }
                 }
             }
+
+            // Attach the ItemCheck event handler
+            categoriesList.ItemCheck += CategoriesList_ItemCheck;
+        }
+
+        private void CategoriesList_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            // When an item's check state is changing, update the database immediately
+            using (SQLiteConnection connection = new SQLiteConnection(sqlConnection))
+            {
+                connection.Open();
+
+                string categoryName = categoriesList.Items[e.Index].ToString();
+                int isChecked = e.NewValue == CheckState.Checked ? 1 : 0;
+
+                // Update the isChecked field in the database
+                String sql = "UPDATE Categories SET isChecked = @isChecked WHERE CategoryName = @CategoryName";
+
+                using (SQLiteCommand cmd = new SQLiteCommand(sql, connection))
+                {
+                    cmd.Parameters.AddWithValue("@isChecked", isChecked);
+                    cmd.Parameters.AddWithValue("@CategoryName", categoryName);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        private void Filter_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Detach the ItemCheck event handler to avoid unnecessary updates during closing
+            categoriesList.ItemCheck -= CategoriesList_ItemCheck;
+            UserControlDay.displayTasks();
         }
 
         private void addCategoryButton_Click(object sender, EventArgs e)
