@@ -32,7 +32,8 @@
             this.dateBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.taskDescriptionTextBox = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.categoryBox = new System.Windows.Forms.TextBox();
+            this.CategoryLabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +61,7 @@
             // 
             this.groupBox1.Controls.Add(this.taskDescriptionTextBox);
             this.groupBox1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 83);
+            this.groupBox1.Location = new System.Drawing.Point(12, 135);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(566, 219);
             this.groupBox1.TabIndex = 3;
@@ -79,21 +80,33 @@
             this.taskDescriptionTextBox.TabIndex = 0;
             this.taskDescriptionTextBox.Text = "label1";
             // 
-            // label1
+            // categoryBox
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(259, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "label1";
+            this.categoryBox.Enabled = false;
+            this.categoryBox.Font = new System.Drawing.Font("Candara Light", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryBox.Location = new System.Drawing.Point(16, 95);
+            this.categoryBox.Name = "categoryBox";
+            this.categoryBox.Size = new System.Drawing.Size(567, 30);
+            this.categoryBox.TabIndex = 5;
+            this.categoryBox.Text = "Category";
+            // 
+            // CategoryLabel
+            // 
+            this.CategoryLabel.AutoSize = true;
+            this.CategoryLabel.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CategoryLabel.Location = new System.Drawing.Point(12, 73);
+            this.CategoryLabel.Name = "CategoryLabel";
+            this.CategoryLabel.Size = new System.Drawing.Size(71, 19);
+            this.CategoryLabel.TabIndex = 4;
+            this.CategoryLabel.Text = "Category";
             // 
             // TaskPreviewWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(588, 313);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(588, 385);
+            this.Controls.Add(this.categoryBox);
+            this.Controls.Add(this.CategoryLabel);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dateBox);
             this.Controls.Add(this.taskSubject);
@@ -113,6 +126,7 @@
         private System.Windows.Forms.TextBox dateBox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label taskDescriptionTextBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox categoryBox;
+        private System.Windows.Forms.Label CategoryLabel;
     }
 }
