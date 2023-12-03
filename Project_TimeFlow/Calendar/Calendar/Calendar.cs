@@ -144,7 +144,11 @@ namespace Calendar
             daysContainer.Controls.Add(weekDay);
         }
 
-
+        private void FilterButton_Click(object sender, EventArgs e)
+        {
+            Filter filter = new Filter();
+            filter.Show();
+        }
         private void nextButton_Click(object sender, EventArgs e)
         {
 

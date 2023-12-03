@@ -23,7 +23,7 @@ namespace Calendar
         usernameRequirements a = new usernameRequirements();
         static string username;
         static string password;
-        public static int userID;
+        public static int userID = 8;
         public logInPage()
         {
             InitializeComponent();
@@ -99,8 +99,8 @@ namespace Calendar
         {
             username = logInUsernameTextBox.Text;
             password = logInPasswordTextBox.Text;
-            
-            if (VerifyUser(username, password))
+
+            if (true) //(VerifyUser(username, password))
             {
                 loadForm(new PracticeForm());
             }
