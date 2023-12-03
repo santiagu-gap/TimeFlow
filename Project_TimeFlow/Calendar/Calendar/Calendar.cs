@@ -272,6 +272,12 @@ namespace Calendar
             previousButton.BackColor = Color.LightGray;
         }
 
+        private void FilterButton_Click(object sender, EventArgs e)
+        {
+            Filter filter = new Filter();
+            filter.Show();
+        }
+
         private void loadLabels()
         {
             sundayLabel.Text = "Sunday";
