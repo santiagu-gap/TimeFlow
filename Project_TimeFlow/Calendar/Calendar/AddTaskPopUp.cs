@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
+//using MySql.Data.MySqlClient;
 
 namespace Calendar
 {
@@ -49,7 +50,7 @@ namespace Calendar
                 {
                     try
                     {
-                        String sql = "INSERT INTO Task(TaskName, TaskDescription, TaskDate) VALUES (?, ?, ?)";
+                        String sql = "INSERT INTO Task(TaskName, TaskDescription, TaskDate, UserId) VALUES (?, ?, ?, ?)";
 
                         SQLiteCommand cmd = connection.CreateCommand();
                         cmd.CommandText = sql;
@@ -57,6 +58,7 @@ namespace Calendar
                         cmd.Parameters.AddWithValue("TaskName", taskSubject.Text);
                         cmd.Parameters.AddWithValue("TaskDescription", taskDescription.Text);
                         cmd.Parameters.AddWithValue("TaskDate", selectedDate.Text);
+                        cmd.Parameters.AddWithValue("UserId", logInPage.userID);
 
                         cmd.ExecuteNonQuery();
 

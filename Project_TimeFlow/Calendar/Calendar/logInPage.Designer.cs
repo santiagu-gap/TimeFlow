@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(logInPage));
             this.backgroundPicture = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -47,6 +48,10 @@
             this.languageButton = new System.Windows.Forms.Label();
             this.uNameHelp = new System.Windows.Forms.Label();
             this.masterPanel = new System.Windows.Forms.Panel();
+            this.phelp = new System.Windows.Forms.Label();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.errorLabel = new System.Windows.Forms.Label();
+            this.signUpErrorLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.masterPanel.SuspendLayout();
@@ -54,6 +59,7 @@
             // 
             // backgroundPicture
             // 
+            this.backgroundPicture.BackColor = System.Drawing.Color.Transparent;
             this.backgroundPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.backgroundPicture.Image = ((System.Drawing.Image)(resources.GetObject("backgroundPicture.Image")));
             this.backgroundPicture.Location = new System.Drawing.Point(309, 88);
@@ -67,7 +73,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(411, 190);
+            this.pictureBox2.Location = new System.Drawing.Point(412, 191);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(150, 150);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -78,10 +84,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(546, 232);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 40.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(547, 228);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(298, 74);
+            this.label1.Size = new System.Drawing.Size(335, 81);
             this.label1.TabIndex = 2;
             this.label1.Text = "TimeFlow";
             // 
@@ -164,6 +170,7 @@
             this.createAccountButton.TabIndex = 14;
             this.createAccountButton.Text = "Create Account";
             this.createAccountButton.UseVisualStyleBackColor = false;
+            this.createAccountButton.Click += new System.EventHandler(this.createAccountButton_Click);
             // 
             // signUpPasswordTextBox
             // 
@@ -242,9 +249,16 @@
             this.uNameHelp.Size = new System.Drawing.Size(22, 27);
             this.uNameHelp.TabIndex = 16;
             this.uNameHelp.Text = "*";
+            this.toolTip.SetToolTip(this.uNameHelp, "Username Requirements:\r\n- No special characters\r\n- Minimum of 4 characters\r\n- No " +
+        "spaces\r\n");
             // 
             // masterPanel
             // 
+            this.masterPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.masterPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.masterPanel.Controls.Add(this.signUpErrorLabel);
+            this.masterPanel.Controls.Add(this.errorLabel);
+            this.masterPanel.Controls.Add(this.phelp);
             this.masterPanel.Controls.Add(this.uNameHelp);
             this.masterPanel.Controls.Add(this.languageButton);
             this.masterPanel.Controls.Add(this.createAccountButton);
@@ -266,6 +280,42 @@
             this.masterPanel.Name = "masterPanel";
             this.masterPanel.Size = new System.Drawing.Size(1905, 1038);
             this.masterPanel.TabIndex = 17;
+            // 
+            // phelp
+            // 
+            this.phelp.AutoSize = true;
+            this.phelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(114)))), ((int)(((byte)(250)))));
+            this.phelp.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phelp.ForeColor = System.Drawing.Color.White;
+            this.phelp.Location = new System.Drawing.Point(1104, 538);
+            this.phelp.Name = "phelp";
+            this.phelp.Size = new System.Drawing.Size(22, 27);
+            this.phelp.TabIndex = 17;
+            this.phelp.Text = "*";
+            this.toolTip.SetToolTip(this.phelp, "Password Requirements:\r\n- Minimum of 6 characters\r\n- Includes 1 capitol\r\n- Includ" +
+        "es 1 special character\r\n- No spaces\r\n");
+            // 
+            // errorLabel
+            // 
+            this.errorLabel.AutoSize = true;
+            this.errorLabel.BackColor = System.Drawing.Color.White;
+            this.errorLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorLabel.ForeColor = System.Drawing.Color.Red;
+            this.errorLabel.Location = new System.Drawing.Point(441, 598);
+            this.errorLabel.Name = "errorLabel";
+            this.errorLabel.Size = new System.Drawing.Size(0, 21);
+            this.errorLabel.TabIndex = 18;
+            // 
+            // signUpErrorLabel
+            // 
+            this.signUpErrorLabel.AutoSize = true;
+            this.signUpErrorLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(114)))), ((int)(((byte)(250)))));
+            this.signUpErrorLabel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signUpErrorLabel.ForeColor = System.Drawing.Color.Red;
+            this.signUpErrorLabel.Location = new System.Drawing.Point(995, 599);
+            this.signUpErrorLabel.Name = "signUpErrorLabel";
+            this.signUpErrorLabel.Size = new System.Drawing.Size(0, 21);
+            this.signUpErrorLabel.TabIndex = 19;
             // 
             // logInPage
             // 
@@ -304,5 +354,9 @@
         private System.Windows.Forms.Label languageButton;
         private System.Windows.Forms.Label uNameHelp;
         private System.Windows.Forms.Panel masterPanel;
+        private System.Windows.Forms.ToolTip toolTip;
+        private System.Windows.Forms.Label phelp;
+        private System.Windows.Forms.Label errorLabel;
+        private System.Windows.Forms.Label signUpErrorLabel;
     }
 }

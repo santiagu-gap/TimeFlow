@@ -77,6 +77,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="accountInformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="accountInformationForm.Designer.cs">
+      <DependentUpon>accountInformationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddTaskPopUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
     <Compile Include="usernameRequirements.Designer.cs">
       <DependentUpon>usernameRequirements.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="accountInformationForm.resx">
+      <DependentUpon>accountInformationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddTaskPopUp.resx">
       <DependentUpon>AddTaskPopUp.cs</DependentUpon>
     </EmbeddedResource>

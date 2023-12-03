@@ -98,11 +98,12 @@ namespace Calendar
             {
                 connection.Open();
 
-                String sql = "SELECT * FROM Task WHERE TaskDate = ?";
+                String sql = "SELECT * FROM Task WHERE TaskDate = ? AND UserId = ?";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(sql, connection))
                 {
                     cmd.Parameters.AddWithValue("TaskDate", Calendar.staticMonth + "/" + dayNumberLabel.Text + "/" + Calendar.staticYear);
+                    cmd.Parameters.AddWithValue("UserId", logInPage.userID);
 
                     using (SQLiteDataReader reader = cmd.ExecuteReader())
                     {

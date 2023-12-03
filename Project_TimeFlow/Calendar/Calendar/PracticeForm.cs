@@ -236,9 +236,5 @@ namespace Calendar
             control.Region = new Region(path);
         }
 
-        private void subContainerPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

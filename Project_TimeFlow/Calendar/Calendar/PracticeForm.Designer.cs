@@ -45,6 +45,9 @@
             this.calendarPanel = new System.Windows.Forms.Panel();
             this.calendarLabel = new System.Windows.Forms.Label();
             this.calendarIcon = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.subContainerPanel = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -60,6 +63,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.taskIcon)).BeginInit();
             this.calendarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.calendarIcon)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.subContainerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -84,6 +89,7 @@
             this.sidebarFlowPanel.Controls.Add(this.homePanel);
             this.sidebarFlowPanel.Controls.Add(this.taskPanel);
             this.sidebarFlowPanel.Controls.Add(this.calendarPanel);
+            this.sidebarFlowPanel.Controls.Add(this.panel2);
             this.sidebarFlowPanel.Controls.Add(this.subContainerPanel);
             this.sidebarFlowPanel.Location = new System.Drawing.Point(0, 2);
             this.sidebarFlowPanel.Margin = new System.Windows.Forms.Padding(2);
@@ -270,22 +276,55 @@
             this.calendarIcon.MouseEnter += new System.EventHandler(this.mouseEnterEvent);
             this.calendarIcon.MouseLeave += new System.EventHandler(this.mouseLeaveEvent);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.pictureBox4);
+            this.panel2.Location = new System.Drawing.Point(3, 283);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(215, 64);
+            this.panel2.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Font = new System.Drawing.Font("Candara", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(197)))), ((int)(((byte)(249)))));
+            this.label1.Location = new System.Drawing.Point(62, 17);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(123, 30);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Matrix";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(9, 10);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(45, 45);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 4;
+            this.pictureBox4.TabStop = false;
+            // 
             // subContainerPanel
             // 
             this.subContainerPanel.Controls.Add(this.pictureBox3);
             this.subContainerPanel.Controls.Add(this.pictureBox2);
             this.subContainerPanel.Controls.Add(this.pictureBox1);
-            this.subContainerPanel.Location = new System.Drawing.Point(3, 283);
+            this.subContainerPanel.Location = new System.Drawing.Point(3, 353);
             this.subContainerPanel.Name = "subContainerPanel";
-            this.subContainerPanel.Size = new System.Drawing.Size(168, 747);
+            this.subContainerPanel.Size = new System.Drawing.Size(168, 677);
             this.subContainerPanel.TabIndex = 6;
-            this.subContainerPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.subContainerPanel_Paint);
             // 
             // pictureBox3
             // 
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(17, 592);
+            this.pictureBox3.Location = new System.Drawing.Point(17, 522);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(30, 30);
@@ -297,7 +336,7 @@
             // 
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(11, 641);
+            this.pictureBox2.Location = new System.Drawing.Point(11, 571);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(40, 40);
@@ -309,7 +348,7 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(11, 698);
+            this.pictureBox1.Location = new System.Drawing.Point(11, 628);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(40, 40);
@@ -350,6 +389,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.taskIcon)).EndInit();
             this.calendarPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.calendarIcon)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.subContainerPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -381,5 +422,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
