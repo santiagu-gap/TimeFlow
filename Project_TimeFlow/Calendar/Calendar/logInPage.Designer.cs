@@ -78,10 +78,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 40.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(547, 228);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(546, 232);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(335, 81);
+            this.label1.Size = new System.Drawing.Size(298, 74);
             this.label1.TabIndex = 2;
             this.label1.Text = "TimeFlow";
             // 
@@ -242,8 +242,6 @@
             this.uNameHelp.Size = new System.Drawing.Size(22, 27);
             this.uNameHelp.TabIndex = 16;
             this.uNameHelp.Text = "*";
-            this.uNameHelp.MouseEnter += new System.EventHandler(this.uNameHelp_MouseHover);
-            this.uNameHelp.MouseLeave += new System.EventHandler(this.uNameHelp_MouseLeave);
             // 
             // masterPanel
             // 
@@ -268,7 +266,6 @@
             this.masterPanel.Name = "masterPanel";
             this.masterPanel.Size = new System.Drawing.Size(1905, 1038);
             this.masterPanel.TabIndex = 17;
-            this.masterPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.masterPanel_Paint);
             // 
             // logInPage
             // 

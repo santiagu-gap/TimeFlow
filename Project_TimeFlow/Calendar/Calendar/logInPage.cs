@@ -10,12 +10,14 @@ using System.Resources;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Data.SQLite;
 using System.Windows.Forms;
 
 namespace Calendar
 {
     public partial class logInPage : Form
     {
+        String sqlConnection = "Data Source=..\\..\\..\\..\\Database\\tasksDB.db;Version=3;";
         private static bool isFrench = false;
         usernameRequirements a = new usernameRequirements();
         public logInPage()
@@ -84,19 +86,55 @@ namespace Calendar
             
         }
 
-        private void uNameHelp_MouseHover(object sender, EventArgs e)
-        { 
-            
-        }
-
-        private void uNameHelp_MouseLeave(object sender, EventArgs e)
+        private void saveUser_Click(object sender, EventArgs e)
         {
-            
+            using (SQLiteConnection connection = new SQLiteConnection(sqlConnection))
+            {
+                connection.Open();
+
+                using (SQLiteTransaction transaction = connection.BeginTransaction())
+                {
+                    try
+                    {
+                        String sql = "INSERT INTO Task(TaskName, TaskDescription, TaskDate) VALUES (?, ?, ?)";
+
+                        SQLiteCommand cmd = connection.CreateCommand();
+                        cmd.CommandText = sql;
+
+                        cmd.Parameters.AddWithValue("TaskName", taskSubject.Text);
+                        cmd.Parameters.AddWithValue("TaskDescription", taskDescription.Text);
+                        cmd.Parameters.AddWithValue("TaskDate", selectedDate.Text);
+
+                        cmd.ExecuteNonQuery();
+
+
+                        string taskName = taskSubject.Text;
+                        UserControlDay uc = new UserControlDay();
+
+                        uc.UpdateTaskLabel(taskName);
+
+
+                        transaction.Commit(); // Commit the transaction
+                        MessageBox.Show("Saved!");
+
+
+                        //label1.Text = UserControlDay.lastAccessedDay.ToString();
+
+
+                        //UserControlDay day = new UserControlDay(UserControlDay.lastAccessedDay);
+                        //day.Refresh();
+
+                    }
+                    catch (Exception ex)
+                    {
+                        // Handle exceptions appropriately
+                        MessageBox.Show($"Error: {ex.Message}");
+                        transaction.Rollback(); // Rollback the transaction if an error occurs
+                    }
+                }
+            }
+
         }
 
-        private void masterPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
