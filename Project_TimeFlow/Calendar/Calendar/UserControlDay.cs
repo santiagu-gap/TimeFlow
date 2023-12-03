@@ -98,7 +98,7 @@ namespace Calendar
             {
                 connection.Open();
 
-                String sql = "SELECT * FROM Task WHERE TaskDate = ? AND UserId = ?";
+                String sql = "SELECT * FROM Task WHERE TaskDate = ? AND UserId = ? AND (CategoryId IS NULL OR CategoryId IN (SELECT CategoryId FROM Categories WHERE IsChecked = 1))";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(sql, connection))
                 {
@@ -115,25 +115,19 @@ namespace Calendar
                                 {
                                     case 1:
                                         taskLabel1.Text = reader["TaskName"].ToString();
-                                        //taskLabel1.BackColor = Color.FromArgb(100, Color.DarkRed);
-                                        taskLabel1.BackColor = Color.FromArgb(100,145, 170, 252);
-                                        //taskLabel1.Update();
+                                        taskLabel1.BackColor = Color.FromArgb(100, 145, 170, 252);
                                         taskOneLoaded = true;
                                         break;
                                     case 2:
                                         taskLabel2.Text = reader["TaskName"].ToString();
-
-                                        //taskLabel2.BackColor = Color.FromArgb(100, Color.Coral);
-                                        taskLabel2.BackColor = Color.FromArgb(100,145, 170, 252);
+                                        taskLabel2.BackColor = Color.FromArgb(100, 145, 170, 252);
                                         taskTwoLoaded = true;
                                         break;
                                     case 3:
                                         taskLabel3.Text = reader["TaskName"].ToString();
-                                        //taskLabel3.BackColor = Color.FromArgb(100, Color.SpringGreen);
                                         taskLabel3.BackColor = Color.FromArgb(100, 145, 170, 252);
                                         taskThreeLoaded = true;
                                         break;
-
                                 }
                                 tasksOutputted++;
                             }
@@ -143,6 +137,58 @@ namespace Calendar
             }
         }
 
+
+        /*        public void displayTasks()
+                {
+                    using (SQLiteConnection connection = new SQLiteConnection(sqlConnection))
+                    {
+                        connection.Open();
+
+                        String sql = "SELECT * FROM Task WHERE TaskDate = ? AND UserId = ?";
+
+                        using (SQLiteCommand cmd = new SQLiteCommand(sql, connection))
+                        {
+                            cmd.Parameters.AddWithValue("TaskDate", Calendar.staticMonth + "/" + dayNumberLabel.Text + "/" + Calendar.staticYear);
+                            cmd.Parameters.AddWithValue("UserId", logInPage.userID);
+
+                            using (SQLiteDataReader reader = cmd.ExecuteReader())
+                            {
+                                if (reader.HasRows)
+                                {
+                                    while (reader.Read() && tasksOutputted <= 4)
+                                    {
+                                        switch (tasksOutputted)
+                                        {
+                                            case 1:
+                                                taskLabel1.Text = reader["TaskName"].ToString();
+                                                //taskLabel1.BackColor = Color.FromArgb(100, Color.DarkRed);
+                                                taskLabel1.BackColor = Color.FromArgb(100,145, 170, 252);
+                                                //taskLabel1.Update();
+                                                taskOneLoaded = true;
+                                                break;
+                                            case 2:
+                                                taskLabel2.Text = reader["TaskName"].ToString();
+
+                                                //taskLabel2.BackColor = Color.FromArgb(100, Color.Coral);
+                                                taskLabel2.BackColor = Color.FromArgb(100,145, 170, 252);
+                                                taskTwoLoaded = true;
+                                                break;
+                                            case 3:
+                                                taskLabel3.Text = reader["TaskName"].ToString();
+                                                //taskLabel3.BackColor = Color.FromArgb(100, Color.SpringGreen);
+                                                taskLabel3.BackColor = Color.FromArgb(100, 145, 170, 252);
+                                                taskThreeLoaded = true;
+                                                break;
+
+                                        }
+                                        tasksOutputted++;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+        */
         public void UpdateTaskLabel(string taskName)
         {
                 taskLabel1.Text = taskName;
