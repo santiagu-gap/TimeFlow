@@ -98,7 +98,7 @@ namespace Calendar
             {
                 connection.Open();
 
-                String sql = "SELECT * FROM Task WHERE TaskDate = ? AND UserId = ?";
+                String sql = "SELECT * FROM Task WHERE TaskDate = ? AND UserId = ? AND (CategoryId IS NULL OR CategoryId IN (SELECT CategoryId FROM Categories WHERE IsChecked = 1))";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(sql, connection))
                 {
@@ -111,26 +111,94 @@ namespace Calendar
                         {
                             while (reader.Read() && tasksOutputted <= 14)
                             {
-                                string task = "taskLabel" + tasksOutputted;
+                                int priority = Convert.ToInt32(reader["Priority"]);
 
-                                Control control = Controls.Find(task, true).FirstOrDefault();
-
-                                if (control != null && control is System.Windows.Forms.Label label)
+                                // Check Priority and boolean flags
+                                bool displayTask = false;
+                                if (priority == 0) // Unlabeled
                                 {
-                                    label.Text = reader["TaskName"].ToString();
-                                    label.BackColor = Color.FromArgb(100, 145, 170, 252);
-                                    ApplyRoundedCorners(label, 10);
+                                    displayTask = UnlabeledPriority;
                                 }
-                                tasksOutputted++;
+                                else // Labeled with Priority
+                                {
+                                    switch (priority)
+                                    {
+                                        case 1:
+                                            displayTask = Priority1;
+                                            break;
+                                        case 2:
+                                            displayTask = Priority2;
+                                            break;
+                                        case 3:
+                                            displayTask = Priority3;
+                                            break;
+                                        case 4:
+                                            displayTask = Priority4;
+                                            break;
+                                    }
+                                }
+
+                                if (displayTask)
+                                {
+                                    string taskLabel = "taskLabel" + tasksOutputted;
+
+                                    Control control = Controls.Find(taskLabel, true).FirstOrDefault();
+
+                                    if (control != null && control is System.Windows.Forms.Label label)
+                                    {
+                                        label.Text = reader["TaskName"].ToString();
+                                        label.BackColor = Color.FromArgb(100, 145, 170, 252);
+                                        ApplyRoundedCorners(label, 10);
+                                    }
+                                    tasksOutputted++;
+                                }
                             }
-
                         }
-
                     }
                 }
             }
         }
 
+        /*        public void displayTasks()
+                {
+                    tasksOutputted = 1;
+                    using (SQLiteConnection connection = new SQLiteConnection(sqlConnection))
+                    {
+                        connection.Open();
+
+                        String sql = "SELECT * FROM Task WHERE TaskDate = ? AND UserId = ?";
+
+                        using (SQLiteCommand cmd = new SQLiteCommand(sql, connection))
+                        {
+                            cmd.Parameters.AddWithValue("TaskDate", Calendar.staticMonth + "/" + dayNumberLabel.Text + "/" + Calendar.staticYear);
+                            cmd.Parameters.AddWithValue("UserId", logInPage.userID);
+
+                            using (SQLiteDataReader reader = cmd.ExecuteReader())
+                            {
+                                if (reader.HasRows)
+                                {
+                                    while (reader.Read() && tasksOutputted <= 14)
+                                    {
+                                        string task = "taskLabel" + tasksOutputted;
+
+                                        Control control = Controls.Find(task, true).FirstOrDefault();
+
+                                        if (control != null && control is System.Windows.Forms.Label label)
+                                        {
+                                            label.Text = reader["TaskName"].ToString();
+                                            label.BackColor = Color.FromArgb(100, 145, 170, 252);
+                                            ApplyRoundedCorners(label, 10);
+                                        }
+                                        tasksOutputted++;
+                                    }
+
+                                }
+
+                            }
+                        }
+                    }
+                }
+        */
         private void taskLabel_Click(object sender, EventArgs e)
         {
             if (sender is System.Windows.Forms.Label clickedLabel)
