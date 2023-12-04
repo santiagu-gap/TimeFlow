@@ -47,7 +47,7 @@
             this.calendarIcon = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.matrixButton = new System.Windows.Forms.PictureBox();
             this.subContainerPanel = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -67,7 +67,7 @@
             this.calendarPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.calendarIcon)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrixButton)).BeginInit();
             this.subContainerPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -79,7 +79,7 @@
             // 
             this.formContainer.BackColor = System.Drawing.SystemColors.Control;
             this.formContainer.Location = new System.Drawing.Point(134, 0);
-            this.formContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.formContainer.Margin = new System.Windows.Forms.Padding(2);
             this.formContainer.MaximumSize = new System.Drawing.Size(1376, 838);
             this.formContainer.MinimumSize = new System.Drawing.Size(1293, 838);
             this.formContainer.Name = "formContainer";
@@ -119,7 +119,7 @@
             this.panel1.Controls.Add(this.menuLabel);
             this.panel1.Controls.Add(this.menuIcon);
             this.panel1.Location = new System.Drawing.Point(2, 6);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(161, 52);
             this.panel1.TabIndex = 5;
@@ -245,7 +245,7 @@
             this.calendarPanel.Controls.Add(this.calendarLabel);
             this.calendarPanel.Controls.Add(this.calendarIcon);
             this.calendarPanel.Location = new System.Drawing.Point(2, 174);
-            this.calendarPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.calendarPanel.Margin = new System.Windows.Forms.Padding(2);
             this.calendarPanel.Name = "calendarPanel";
             this.calendarPanel.Size = new System.Drawing.Size(161, 52);
             this.calendarPanel.TabIndex = 4;
@@ -287,9 +287,9 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.pictureBox4);
+            this.panel2.Controls.Add(this.matrixButton);
             this.panel2.Location = new System.Drawing.Point(2, 230);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(161, 52);
             this.panel2.TabIndex = 5;
@@ -307,17 +307,18 @@
             this.label1.Text = "Matrix";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pictureBox4
+            // matrixButton
             // 
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(7, 8);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(34, 37);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 4;
-            this.pictureBox4.TabStop = false;
+            this.matrixButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.matrixButton.Image = ((System.Drawing.Image)(resources.GetObject("matrixButton.Image")));
+            this.matrixButton.Location = new System.Drawing.Point(7, 8);
+            this.matrixButton.Margin = new System.Windows.Forms.Padding(2);
+            this.matrixButton.Name = "matrixButton";
+            this.matrixButton.Size = new System.Drawing.Size(34, 37);
+            this.matrixButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.matrixButton.TabIndex = 4;
+            this.matrixButton.TabStop = false;
+            this.matrixButton.Click += new System.EventHandler(this.matrixButton_Click);
             // 
             // subContainerPanel
             // 
@@ -328,7 +329,7 @@
             this.subContainerPanel.Controls.Add(this.pictureBox2);
             this.subContainerPanel.Controls.Add(this.accountInformation);
             this.subContainerPanel.Location = new System.Drawing.Point(2, 286);
-            this.subContainerPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.subContainerPanel.Margin = new System.Windows.Forms.Padding(2);
             this.subContainerPanel.Name = "subContainerPanel";
             this.subContainerPanel.Size = new System.Drawing.Size(126, 550);
             this.subContainerPanel.TabIndex = 6;
@@ -414,7 +415,7 @@
             this.containerPanel.Controls.Add(this.sidebarFlowPanel);
             this.containerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.containerPanel.Location = new System.Drawing.Point(0, 0);
-            this.containerPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.containerPanel.Margin = new System.Windows.Forms.Padding(2);
             this.containerPanel.Name = "containerPanel";
             this.containerPanel.Size = new System.Drawing.Size(1426, 839);
             this.containerPanel.TabIndex = 0;
@@ -431,7 +432,7 @@
             this.ClientSize = new System.Drawing.Size(1426, 839);
             this.Controls.Add(this.formContainer);
             this.Controls.Add(this.containerPanel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PracticeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PracticeForm";
@@ -446,7 +447,7 @@
             this.calendarPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.calendarIcon)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.matrixButton)).EndInit();
             this.subContainerPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -480,7 +481,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox matrixButton;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

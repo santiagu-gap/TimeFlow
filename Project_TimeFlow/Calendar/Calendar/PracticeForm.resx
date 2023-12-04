@@ -229,7 +229,7 @@
   <data name="homeIcon.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAESxJREFUeF7t1gmW5VhuRMHe/6alVvU96pqiMgaQBEmzBWR8OvwB+S8AAAAAAAAA
+        vwAADr8BOAVTJAAAESxJREFUeF7t1gmW5VhuRMHe/6alVvU96pqiMgaQBEmzBWR8OvwB+S8AAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAMb8z8H6MwDA2brF6/TzAIAJ3dfb6ecDAJ/R/XycPg8A+D/dx9fp8wHg
         PbqBpFgA4Jm6d3ygmADg/rptfFHxAcC9dMf4oeIEgN26WwwrXgDYpTvFCYocAK7TTeICjQAAztMN4mKN
@@ -582,7 +582,7 @@
         ZmZmZmZmZmZmZmZmZh/fv/71Pytag7drYHVdAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="matrixButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         vAAADrwBlbxySQAAKyZJREFUeF7t3V2IZPld//E8/o0S8yyrEBUFvRDJhQqRBBUiuGpyEx8iouQu4IU3

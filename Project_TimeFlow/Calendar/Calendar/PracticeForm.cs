@@ -17,6 +17,7 @@ namespace Calendar
         bool calendarSelected = false;
         bool homeSelected = true;
         bool tasksSelected = false;
+        bool matrixSelected = false;
         public PracticeForm()
         {
             InitializeComponent();
@@ -202,6 +203,7 @@ namespace Calendar
             tasksSelected = false;
             homeSelected = false;
             calendarSelected = true;
+            matrixSelected = false;
             // Change the image directly within the click event
             resetIcons();
             calendarIcon.Image = (Image)Properties.Resources.ResourceManager.GetObject("calendarWhite");
@@ -213,6 +215,7 @@ namespace Calendar
             tasksSelected = true;
             homeSelected = false;
             calendarSelected = false;
+            matrixSelected = false;
 
             resetIcons();
             taskIcon.Image = (Image)Properties.Resources.ResourceManager.GetObject("taskWhite");
@@ -224,6 +227,7 @@ namespace Calendar
             tasksSelected = false;
             homeSelected = true;
             calendarSelected = false;
+            matrixSelected = false;
 
             resetIcons();
             homeIcon.Image = (Image)Properties.Resources.ResourceManager.GetObject("homeWhite");
@@ -247,5 +251,17 @@ namespace Calendar
             loadForm(new accountInformationForm());
         }
 
+        private void matrixButton_Click(object sender, EventArgs e)
+        {
+            loadForm(new PriorityMatrix());
+            tasksSelected = false;
+            homeSelected = false;
+            calendarSelected = false;
+            matrixSelected = true;
+
+            resetIcons();
+            homeIcon.Image = (Image)Properties.Resources.ResourceManager.GetObject("matrixWhite");
+            homeLabel.ForeColor = Color.White;
+        }
     }
 }

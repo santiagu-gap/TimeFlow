@@ -123,7 +123,7 @@
             this.tasksNode});
             this.TasksMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.TasksMenuStrip.Name = "TasksMenuStrip";
-            this.TasksMenuStrip.Size = new System.Drawing.Size(800, 24);
+            this.TasksMenuStrip.Size = new System.Drawing.Size(1277, 24);
             this.TasksMenuStrip.TabIndex = 9;
             this.TasksMenuStrip.Text = "menuStrip1";
             // 
@@ -137,7 +137,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1277, 799);
             this.Controls.Add(this.NotUrgentLabel);
             this.Controls.Add(this.UrgentLabel);
             this.Controls.Add(this.NotImportantLabel);
