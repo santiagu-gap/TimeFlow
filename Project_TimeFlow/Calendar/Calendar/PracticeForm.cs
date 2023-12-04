@@ -241,5 +241,11 @@ namespace Calendar
             PriorityMatrix matrix = new PriorityMatrix();
             matrix.Show();
         }
+
+        private void NotificationButton_Click(object sender, EventArgs e)
+        {
+            NotificationsForm notif = new NotificationsForm();
+            notif.Show();
+        }
     }
 }

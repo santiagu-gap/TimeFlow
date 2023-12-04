@@ -35,48 +35,53 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuLabel = new System.Windows.Forms.Label();
-            this.menuIcon = new System.Windows.Forms.PictureBox();
             this.homePanel = new System.Windows.Forms.Panel();
             this.homeLabel = new System.Windows.Forms.Label();
-            this.homeIcon = new System.Windows.Forms.PictureBox();
             this.taskPanel = new System.Windows.Forms.Panel();
             this.tasksLabel = new System.Windows.Forms.Label();
-            this.taskIcon = new System.Windows.Forms.PictureBox();
             this.calendarPanel = new System.Windows.Forms.Panel();
             this.calendarLabel = new System.Windows.Forms.Label();
-            this.calendarIcon = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.subContainerPanel = new System.Windows.Forms.Panel();
+            this.containerPanel = new System.Windows.Forms.Panel();
+            this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.menuIcon = new System.Windows.Forms.PictureBox();
+            this.homeIcon = new System.Windows.Forms.PictureBox();
+            this.taskIcon = new System.Windows.Forms.PictureBox();
+            this.calendarIcon = new System.Windows.Forms.PictureBox();
+            this.NotificationButton = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.containerPanel = new System.Windows.Forms.Panel();
-            this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.sidebarFlowPanel.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.menuIcon)).BeginInit();
             this.homePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.homeIcon)).BeginInit();
             this.taskPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.taskIcon)).BeginInit();
             this.calendarPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.calendarIcon)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.subContainerPanel.SuspendLayout();
+            this.containerPanel.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.menuIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homeIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taskIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calendarIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NotificationButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.containerPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // formContainer
             // 
             this.formContainer.BackColor = System.Drawing.SystemColors.Control;
             this.formContainer.Location = new System.Drawing.Point(136, -1);
-            this.formContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.formContainer.Margin = new System.Windows.Forms.Padding(2);
             this.formContainer.Name = "formContainer";
             this.formContainer.Size = new System.Drawing.Size(1293, 838);
             this.formContainer.TabIndex = 1;
@@ -85,6 +90,7 @@
             // 
             this.sidebarFlowPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.sidebarFlowPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(114)))), ((int)(((byte)(250)))));
+            this.sidebarFlowPanel.Controls.Add(this.panel3);
             this.sidebarFlowPanel.Controls.Add(this.flowLayoutPanel2);
             this.sidebarFlowPanel.Controls.Add(this.panel1);
             this.sidebarFlowPanel.Controls.Add(this.homePanel);
@@ -103,7 +109,7 @@
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(2, 2);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(2, 58);
             this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(0, 0);
@@ -113,8 +119,8 @@
             // 
             this.panel1.Controls.Add(this.menuLabel);
             this.panel1.Controls.Add(this.menuIcon);
-            this.panel1.Location = new System.Drawing.Point(2, 6);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(2, 62);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(161, 52);
             this.panel1.TabIndex = 5;
@@ -132,26 +138,11 @@
             this.menuLabel.Text = "Menu";
             this.menuLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // menuIcon
-            // 
-            this.menuIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.menuIcon.Image = ((System.Drawing.Image)(resources.GetObject("menuIcon.Image")));
-            this.menuIcon.Location = new System.Drawing.Point(8, 5);
-            this.menuIcon.Margin = new System.Windows.Forms.Padding(2);
-            this.menuIcon.Name = "menuIcon";
-            this.menuIcon.Size = new System.Drawing.Size(30, 32);
-            this.menuIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.menuIcon.TabIndex = 0;
-            this.menuIcon.TabStop = false;
-            this.menuIcon.Click += new System.EventHandler(this.iconPictureBox_Click);
-            this.menuIcon.MouseEnter += new System.EventHandler(this.mouseEnterEvent);
-            this.menuIcon.MouseLeave += new System.EventHandler(this.mouseLeaveEvent);
-            // 
             // homePanel
             // 
             this.homePanel.Controls.Add(this.homeLabel);
             this.homePanel.Controls.Add(this.homeIcon);
-            this.homePanel.Location = new System.Drawing.Point(2, 62);
+            this.homePanel.Location = new System.Drawing.Point(2, 118);
             this.homePanel.Margin = new System.Windows.Forms.Padding(2);
             this.homePanel.Name = "homePanel";
             this.homePanel.Size = new System.Drawing.Size(161, 52);
@@ -176,26 +167,11 @@
             this.homeLabel.MouseEnter += new System.EventHandler(this.mouseEnterEvent);
             this.homeLabel.MouseLeave += new System.EventHandler(this.mouseLeaveEvent);
             // 
-            // homeIcon
-            // 
-            this.homeIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.homeIcon.Image = ((System.Drawing.Image)(resources.GetObject("homeIcon.Image")));
-            this.homeIcon.Location = new System.Drawing.Point(9, 9);
-            this.homeIcon.Margin = new System.Windows.Forms.Padding(2);
-            this.homeIcon.Name = "homeIcon";
-            this.homeIcon.Size = new System.Drawing.Size(30, 32);
-            this.homeIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.homeIcon.TabIndex = 2;
-            this.homeIcon.TabStop = false;
-            this.homeIcon.Click += new System.EventHandler(this.homeIcon_Click);
-            this.homeIcon.MouseEnter += new System.EventHandler(this.mouseEnterEvent);
-            this.homeIcon.MouseLeave += new System.EventHandler(this.mouseLeaveEvent);
-            // 
             // taskPanel
             // 
             this.taskPanel.Controls.Add(this.tasksLabel);
             this.taskPanel.Controls.Add(this.taskIcon);
-            this.taskPanel.Location = new System.Drawing.Point(2, 118);
+            this.taskPanel.Location = new System.Drawing.Point(2, 174);
             this.taskPanel.Margin = new System.Windows.Forms.Padding(2);
             this.taskPanel.Name = "taskPanel";
             this.taskPanel.Size = new System.Drawing.Size(161, 52);
@@ -220,27 +196,12 @@
             this.tasksLabel.MouseEnter += new System.EventHandler(this.mouseEnterEvent);
             this.tasksLabel.MouseLeave += new System.EventHandler(this.mouseLeaveEvent);
             // 
-            // taskIcon
-            // 
-            this.taskIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.taskIcon.Image = ((System.Drawing.Image)(resources.GetObject("taskIcon.Image")));
-            this.taskIcon.Location = new System.Drawing.Point(9, 11);
-            this.taskIcon.Margin = new System.Windows.Forms.Padding(2);
-            this.taskIcon.Name = "taskIcon";
-            this.taskIcon.Size = new System.Drawing.Size(30, 32);
-            this.taskIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.taskIcon.TabIndex = 3;
-            this.taskIcon.TabStop = false;
-            this.taskIcon.Click += new System.EventHandler(this.taskIcon_Click);
-            this.taskIcon.MouseEnter += new System.EventHandler(this.mouseEnterEvent);
-            this.taskIcon.MouseLeave += new System.EventHandler(this.mouseLeaveEvent);
-            // 
             // calendarPanel
             // 
             this.calendarPanel.Controls.Add(this.calendarLabel);
             this.calendarPanel.Controls.Add(this.calendarIcon);
-            this.calendarPanel.Location = new System.Drawing.Point(2, 174);
-            this.calendarPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.calendarPanel.Location = new System.Drawing.Point(2, 230);
+            this.calendarPanel.Margin = new System.Windows.Forms.Padding(2);
             this.calendarPanel.Name = "calendarPanel";
             this.calendarPanel.Size = new System.Drawing.Size(161, 52);
             this.calendarPanel.TabIndex = 4;
@@ -264,27 +225,12 @@
             this.calendarLabel.MouseEnter += new System.EventHandler(this.mouseEnterEvent);
             this.calendarLabel.MouseLeave += new System.EventHandler(this.mouseLeaveEvent);
             // 
-            // calendarIcon
-            // 
-            this.calendarIcon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.calendarIcon.Image = ((System.Drawing.Image)(resources.GetObject("calendarIcon.Image")));
-            this.calendarIcon.Location = new System.Drawing.Point(8, 9);
-            this.calendarIcon.Margin = new System.Windows.Forms.Padding(2);
-            this.calendarIcon.Name = "calendarIcon";
-            this.calendarIcon.Size = new System.Drawing.Size(30, 32);
-            this.calendarIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.calendarIcon.TabIndex = 4;
-            this.calendarIcon.TabStop = false;
-            this.calendarIcon.Click += new System.EventHandler(this.calendarButton_Click);
-            this.calendarIcon.MouseEnter += new System.EventHandler(this.mouseEnterEvent);
-            this.calendarIcon.MouseLeave += new System.EventHandler(this.mouseLeaveEvent);
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox4);
-            this.panel2.Location = new System.Drawing.Point(2, 230);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Location = new System.Drawing.Point(2, 286);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(161, 52);
             this.panel2.TabIndex = 5;
@@ -302,6 +248,127 @@
             this.label1.Text = "Matrix";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // subContainerPanel
+            // 
+            this.subContainerPanel.Controls.Add(this.pictureBox3);
+            this.subContainerPanel.Controls.Add(this.pictureBox2);
+            this.subContainerPanel.Controls.Add(this.pictureBox1);
+            this.subContainerPanel.Location = new System.Drawing.Point(2, 342);
+            this.subContainerPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.subContainerPanel.Name = "subContainerPanel";
+            this.subContainerPanel.Size = new System.Drawing.Size(126, 489);
+            this.subContainerPanel.TabIndex = 6;
+            // 
+            // containerPanel
+            // 
+            this.containerPanel.Controls.Add(this.sidebarFlowPanel);
+            this.containerPanel.Location = new System.Drawing.Point(1, -1);
+            this.containerPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.containerPanel.Name = "containerPanel";
+            this.containerPanel.Size = new System.Drawing.Size(130, 841);
+            this.containerPanel.TabIndex = 0;
+            // 
+            // sidebarTimer
+            // 
+            this.sidebarTimer.Interval = 10;
+            this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.NotificationButton);
+            this.panel3.Location = new System.Drawing.Point(2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(161, 52);
+            this.panel3.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Font = new System.Drawing.Font("Candara", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(197)))), ((int)(((byte)(249)))));
+            this.label2.Location = new System.Drawing.Point(46, 14);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 24);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Notifications";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // menuIcon
+            // 
+            this.menuIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.menuIcon.Image = ((System.Drawing.Image)(resources.GetObject("menuIcon.Image")));
+            this.menuIcon.Location = new System.Drawing.Point(8, 5);
+            this.menuIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.menuIcon.Name = "menuIcon";
+            this.menuIcon.Size = new System.Drawing.Size(30, 32);
+            this.menuIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.menuIcon.TabIndex = 0;
+            this.menuIcon.TabStop = false;
+            this.menuIcon.Click += new System.EventHandler(this.iconPictureBox_Click);
+            this.menuIcon.MouseEnter += new System.EventHandler(this.mouseEnterEvent);
+            this.menuIcon.MouseLeave += new System.EventHandler(this.mouseLeaveEvent);
+            // 
+            // homeIcon
+            // 
+            this.homeIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.homeIcon.Image = ((System.Drawing.Image)(resources.GetObject("homeIcon.Image")));
+            this.homeIcon.Location = new System.Drawing.Point(9, 9);
+            this.homeIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.homeIcon.Name = "homeIcon";
+            this.homeIcon.Size = new System.Drawing.Size(30, 32);
+            this.homeIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.homeIcon.TabIndex = 2;
+            this.homeIcon.TabStop = false;
+            this.homeIcon.Click += new System.EventHandler(this.homeIcon_Click);
+            this.homeIcon.MouseEnter += new System.EventHandler(this.mouseEnterEvent);
+            this.homeIcon.MouseLeave += new System.EventHandler(this.mouseLeaveEvent);
+            // 
+            // taskIcon
+            // 
+            this.taskIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.taskIcon.Image = ((System.Drawing.Image)(resources.GetObject("taskIcon.Image")));
+            this.taskIcon.Location = new System.Drawing.Point(9, 11);
+            this.taskIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.taskIcon.Name = "taskIcon";
+            this.taskIcon.Size = new System.Drawing.Size(30, 32);
+            this.taskIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.taskIcon.TabIndex = 3;
+            this.taskIcon.TabStop = false;
+            this.taskIcon.Click += new System.EventHandler(this.taskIcon_Click);
+            this.taskIcon.MouseEnter += new System.EventHandler(this.mouseEnterEvent);
+            this.taskIcon.MouseLeave += new System.EventHandler(this.mouseLeaveEvent);
+            // 
+            // calendarIcon
+            // 
+            this.calendarIcon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.calendarIcon.Image = ((System.Drawing.Image)(resources.GetObject("calendarIcon.Image")));
+            this.calendarIcon.Location = new System.Drawing.Point(8, 9);
+            this.calendarIcon.Margin = new System.Windows.Forms.Padding(2);
+            this.calendarIcon.Name = "calendarIcon";
+            this.calendarIcon.Size = new System.Drawing.Size(30, 32);
+            this.calendarIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.calendarIcon.TabIndex = 4;
+            this.calendarIcon.TabStop = false;
+            this.calendarIcon.Click += new System.EventHandler(this.calendarButton_Click);
+            this.calendarIcon.MouseEnter += new System.EventHandler(this.mouseEnterEvent);
+            this.calendarIcon.MouseLeave += new System.EventHandler(this.mouseLeaveEvent);
+            // 
+            // NotificationButton
+            // 
+            this.NotificationButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.NotificationButton.Image = ((System.Drawing.Image)(resources.GetObject("NotificationButton.Image")));
+            this.NotificationButton.Location = new System.Drawing.Point(7, 8);
+            this.NotificationButton.Margin = new System.Windows.Forms.Padding(2);
+            this.NotificationButton.Name = "NotificationButton";
+            this.NotificationButton.Size = new System.Drawing.Size(34, 37);
+            this.NotificationButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.NotificationButton.TabIndex = 4;
+            this.NotificationButton.TabStop = false;
+            this.NotificationButton.Click += new System.EventHandler(this.NotificationButton_Click);
+            // 
             // pictureBox4
             // 
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -314,17 +381,6 @@
             this.pictureBox4.TabIndex = 4;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
-            // subContainerPanel
-            // 
-            this.subContainerPanel.Controls.Add(this.pictureBox3);
-            this.subContainerPanel.Controls.Add(this.pictureBox2);
-            this.subContainerPanel.Controls.Add(this.pictureBox1);
-            this.subContainerPanel.Location = new System.Drawing.Point(2, 286);
-            this.subContainerPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.subContainerPanel.Name = "subContainerPanel";
-            this.subContainerPanel.Size = new System.Drawing.Size(126, 550);
-            this.subContainerPanel.TabIndex = 6;
             // 
             // pictureBox3
             // 
@@ -362,20 +418,6 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
-            // containerPanel
-            // 
-            this.containerPanel.Controls.Add(this.sidebarFlowPanel);
-            this.containerPanel.Location = new System.Drawing.Point(1, -1);
-            this.containerPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.containerPanel.Name = "containerPanel";
-            this.containerPanel.Size = new System.Drawing.Size(130, 841);
-            this.containerPanel.TabIndex = 0;
-            // 
-            // sidebarTimer
-            // 
-            this.sidebarTimer.Interval = 10;
-            this.sidebarTimer.Tick += new System.EventHandler(this.sidebarTimer_Tick);
-            // 
             // PracticeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -383,27 +425,29 @@
             this.ClientSize = new System.Drawing.Size(1426, 839);
             this.Controls.Add(this.formContainer);
             this.Controls.Add(this.containerPanel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PracticeForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PracticeForm";
             this.Load += new System.EventHandler(this.PracticeForm_Load);
             this.sidebarFlowPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.menuIcon)).EndInit();
             this.homePanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.homeIcon)).EndInit();
             this.taskPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.taskIcon)).EndInit();
             this.calendarPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.calendarIcon)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.subContainerPanel.ResumeLayout(false);
+            this.containerPanel.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.menuIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.homeIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taskIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calendarIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NotificationButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.containerPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -433,5 +477,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox NotificationButton;
     }
 }

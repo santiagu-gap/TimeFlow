@@ -101,6 +101,12 @@
     <Compile Include="Filter.Designer.cs">
       <DependentUpon>Filter.cs</DependentUpon>
     </Compile>
+    <Compile Include="Notifications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notifications.Designer.cs">
+      <DependentUpon>Notifications.cs</DependentUpon>
+    </Compile>
     <Compile Include="PriorityMatrix.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,12 @@
     </Compile>
     <Compile Include="TaskPreviewWindow.Designer.cs">
       <DependentUpon>TaskPreviewWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskDisplay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TaskDisplay.Designer.cs">
+      <DependentUpon>TaskDisplay.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControlBlankDay.cs">
       <SubType>UserControl</SubType>
@@ -174,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Filter.resx">
       <DependentUpon>Filter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications.resx">
+      <DependentUpon>Notifications.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PriorityMatrix.resx">
       <DependentUpon>PriorityMatrix.cs</DependentUpon>
