@@ -193,9 +193,12 @@ namespace Calendar
             homeIcon.Image = (Image)Properties.Resources.ResourceManager.GetObject("homeBlue");
             taskIcon.Image = (Image)Properties.Resources.ResourceManager.GetObject("taskBlue");
             calendarIcon.Image = (Image)Properties.Resources.ResourceManager.GetObject("calendarBlue");
+            matrixButton.Image = (Image)Properties.Resources.ResourceManager.GetObject("matrixBlue");
+
             calendarLabel.ForeColor = Color.FromArgb(179, 197, 249);
             tasksLabel.ForeColor = Color.FromArgb(179, 197, 249);
             homeLabel.ForeColor = Color.FromArgb(179, 197, 249);
+            matrixLabel.ForeColor = Color.FromArgb(179, 197, 249);
         }
         private void calendarButton_Click(object sender, EventArgs e)
         {
@@ -212,6 +215,7 @@ namespace Calendar
 
         private void taskIcon_Click(object sender, EventArgs e)
         {
+            loadForm(new TaskPage());
             tasksSelected = true;
             homeSelected = false;
             calendarSelected = false;
@@ -260,8 +264,8 @@ namespace Calendar
             matrixSelected = true;
 
             resetIcons();
-            homeIcon.Image = (Image)Properties.Resources.ResourceManager.GetObject("matrixWhite");
-            homeLabel.ForeColor = Color.White;
+            matrixButton.Image = (Image)Properties.Resources.ResourceManager.GetObject("matrixWhite");
+            matrixLabel.ForeColor = Color.White;
         }
     }
 }

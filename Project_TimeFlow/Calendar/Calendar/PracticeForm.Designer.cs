@@ -46,7 +46,7 @@
             this.calendarLabel = new System.Windows.Forms.Label();
             this.calendarIcon = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.matrixLabel = new System.Windows.Forms.Label();
             this.matrixButton = new System.Windows.Forms.PictureBox();
             this.subContainerPanel = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -286,7 +286,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.matrixLabel);
             this.panel2.Controls.Add(this.matrixButton);
             this.panel2.Location = new System.Drawing.Point(2, 230);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
@@ -294,18 +294,18 @@
             this.panel2.Size = new System.Drawing.Size(161, 52);
             this.panel2.TabIndex = 5;
             // 
-            // label1
+            // matrixLabel
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.Font = new System.Drawing.Font("Candara", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(197)))), ((int)(((byte)(249)))));
-            this.label1.Location = new System.Drawing.Point(46, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 24);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Matrix";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.matrixLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.matrixLabel.Font = new System.Drawing.Font("Candara", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.matrixLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(197)))), ((int)(((byte)(249)))));
+            this.matrixLabel.Location = new System.Drawing.Point(46, 14);
+            this.matrixLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.matrixLabel.Name = "matrixLabel";
+            this.matrixLabel.Size = new System.Drawing.Size(92, 24);
+            this.matrixLabel.TabIndex = 4;
+            this.matrixLabel.Text = "Matrix";
+            this.matrixLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // matrixButton
             // 
@@ -480,7 +480,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label matrixLabel;
         private System.Windows.Forms.PictureBox matrixButton;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

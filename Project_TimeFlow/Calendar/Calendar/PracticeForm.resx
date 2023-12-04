@@ -229,7 +229,7 @@
   <data name="homeIcon.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAESxJREFUeF7t1gmW5VhuRMHe/6alVvU96pqiMgaQBEmzBWR8OvwB+S8AAAAAAAAA
+        vgAADr4B6kKxwAAAESxJREFUeF7t1gmW5VhuRMHe/6alVvU96pqiMgaQBEmzBWR8OvwB+S8AAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAMb8z8H6MwDA2brF6/TzAIAJ3dfb6ecDAJ/R/XycPg8A+D/dx9fp8wHg
         PbqBpFgA4Jm6d3ygmADg/rptfFHxAcC9dMf4oeIEgN26WwwrXgDYpTvFCYocAK7TTeICjQAAztMN4mKN
@@ -1161,5 +1161,8 @@
   </data>
   <metadata name="sidebarTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>36</value>
   </metadata>
 </root>
