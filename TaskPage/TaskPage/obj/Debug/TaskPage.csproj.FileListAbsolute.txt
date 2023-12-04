@@ -1,0 +1,11 @@
+C:\Users\2250817\source\repos\TaskPage\TaskPage\bin\Debug\TaskPage.exe.config
+C:\Users\2250817\source\repos\TaskPage\TaskPage\bin\Debug\TaskPage.exe
+C:\Users\2250817\source\repos\TaskPage\TaskPage\bin\Debug\TaskPage.pdb
+C:\Users\2250817\source\repos\TaskPage\TaskPage\obj\Debug\TaskPage.csproj.AssemblyReference.cache
+C:\Users\2250817\source\repos\TaskPage\TaskPage\obj\Debug\TaskPage.csproj.SuggestedBindingRedirects.cache
+C:\Users\2250817\source\repos\TaskPage\TaskPage\obj\Debug\TaskPage.Form1.resources
+C:\Users\2250817\source\repos\TaskPage\TaskPage\obj\Debug\TaskPage.Properties.Resources.resources
+C:\Users\2250817\source\repos\TaskPage\TaskPage\obj\Debug\TaskPage.csproj.GenerateResource.cache
+C:\Users\2250817\source\repos\TaskPage\TaskPage\obj\Debug\TaskPage.csproj.CoreCompileInputs.cache
+C:\Users\2250817\source\repos\TaskPage\TaskPage\obj\Debug\TaskPage.exe
+C:\Users\2250817\source\repos\TaskPage\TaskPage\obj\Debug\TaskPage.pdb
