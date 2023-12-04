@@ -8,12 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace Calendar
 {
     public partial class UserControlDayView : UserControl
     {
+        String sqlConnection = "Data Source=..\\..\\..\\..\\Database\\tasksDB.db;Version=3;";
         public static string staticDay;
+        public static string taskSelected;
+        int tasksOutputted = 1;
         public UserControlDayView()
         {
             InitializeComponent();
@@ -28,8 +32,9 @@ namespace Calendar
             else if (currDay)
             {
                 dayNumberLabel.Text = dayNumber.ToString();
-                //dayNumberLabel.Font = new Font(dayNumberLabel.Font, FontStyle.Bold);
-                dayNumberLabel.BackColor = Color.FromArgb(75, 255, 0, 0);
+                dayNumberLabel.Font = new Font(dayNumberLabel.Font, FontStyle.Bold);
+                dayNumberLabel.ForeColor = Color.White;
+                dayNumberLabel.BackColor = Color.FromArgb(145, 170, 252);
                 ApplyRoundedCorners(dayNumberLabel, 10);
             }
         }
@@ -49,6 +54,85 @@ namespace Calendar
         {
             ApplyRoundedCorners(this, 20);
             ApplyRoundedCorners(addTaskButton, 10);
+            displayTasks();
+        }
+        public void displayTasks()
+        {
+            tasksOutputted = 1;
+            using (SQLiteConnection connection = new SQLiteConnection(sqlConnection))
+            {
+                connection.Open();
+
+                String sql = "SELECT * FROM Task WHERE TaskDate = ? AND UserId = ?";
+
+                using (SQLiteCommand cmd = new SQLiteCommand(sql, connection))
+                {
+                    cmd.Parameters.AddWithValue("TaskDate", Calendar.staticMonth + "/" + dayNumberLabel.Text + "/" + Calendar.staticYear);
+                    cmd.Parameters.AddWithValue("UserId", logInPage.userID);
+
+                    using (SQLiteDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read() && tasksOutputted <= 14)
+                            {
+                                string task = "taskLabel" + tasksOutputted;
+
+                                Control control = Controls.Find(task, true).FirstOrDefault();
+
+                                if (control != null && control is System.Windows.Forms.Label label)
+                                {
+                                    label.Text = reader["TaskName"].ToString();
+                                    label.BackColor = Color.FromArgb(100, 145, 170, 252);
+                                    ApplyRoundedCorners(label, 10);
+                                }
+                                tasksOutputted++;
+                            }
+
+                        }
+
+                    }
+                }
+            }
+        }
+
+        private void taskLabel_Click(object sender, EventArgs e)
+        {
+            if (sender is System.Windows.Forms.Label clickedLabel)
+            {
+                // Get the label's number from its name
+                if (int.TryParse(clickedLabel.Name.Replace("taskLabel", ""), out int labelNumber))
+                {
+                    staticDay = dayNumberLabel.Text;
+                    taskSelected = clickedLabel.Text;
+                    TaskPreviewWindow taskPreviewWindow = new TaskPreviewWindow();
+                    taskPreviewWindow.Show();
+                }
+            }
+        }
+
+        private void task_MouseEnter(object sender, EventArgs e)
+        {
+            if (sender is System.Windows.Forms.Label clickedLabel)
+            {
+                if (!clickedLabel.Text.Equals(""))
+                {
+                    clickedLabel.BackColor = Color.FromArgb(150, 145, 170, 252);
+                }
+
+            }
+
+        }
+
+        private void task_MouseLeave(object sender, EventArgs e)
+        {
+            if (sender is System.Windows.Forms.Label clickedLabel)
+            {
+                if (!clickedLabel.Text.Equals(""))
+                {
+                    clickedLabel.BackColor = Color.FromArgb(100, 145, 170, 252);
+                }
+            }
         }
 
         private void addTaskButton_Click(object sender, EventArgs e)
@@ -57,6 +141,7 @@ namespace Calendar
             Calendar.monthViewBool = false;
             Calendar.weekViewBool = false;
             Calendar.dayViewBool = true;
+            autoAddTaskTimer.Start();
             AddTaskPopUp popUp = new AddTaskPopUp();
             popUp.Show();
         }
@@ -69,6 +154,12 @@ namespace Calendar
         private void addTaskButton_MouseLeave(object sender, EventArgs e)
         {
             addTaskButton.BackColor = Color.White;
+        }
+        private void autoAddTaskTimer_Tick(object sender, EventArgs e)
+        {
+            //addingNewTask = true;
+            //addingNewTaskTrigger = 0;
+            displayTasks();
         }
 
     }

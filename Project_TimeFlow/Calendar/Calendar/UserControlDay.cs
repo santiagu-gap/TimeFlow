@@ -27,19 +27,12 @@ namespace Calendar
         public bool taskOneLoaded = false;
         public bool taskTwoLoaded = false;
         public bool taskThreeLoaded = false;
-        public bool taskFourLoaded = false;
         int tasksOutputted = 1;
         public static string lastAccessedDay;
         public UserControlDay()
         {
             InitializeComponent();
         }
-
-        //public UserControlDay(String date)
-        //{
-        //    InitializeComponent();
-        //    this.date = date;
-        //}
 
         public void days(int dayNumber, bool currDay)
         {
@@ -50,8 +43,9 @@ namespace Calendar
             else if (currDay)
             {
                 dayNumberLabel.Text = dayNumber.ToString();
-                //dayNumberLabel.Font = new Font(dayNumberLabel.Font, FontStyle.Bold);
-                dayNumberLabel.BackColor = Color.FromArgb(75, 255, 0, 0);
+                dayNumberLabel.Font = new Font(dayNumberLabel.Font, FontStyle.Bold);
+                dayNumberLabel.ForeColor = Color.White;
+                dayNumberLabel.BackColor = Color.FromArgb(145, 170, 252);
                 ApplyRoundedCorners(dayNumberLabel, 10);
             }
             
@@ -65,7 +59,6 @@ namespace Calendar
             ApplyRoundedCorners(this.taskLabel1, 10);
             ApplyRoundedCorners(this.taskLabel2, 10);
             ApplyRoundedCorners(this.taskLabel3, 10);
-            ApplyRoundedCorners(this.taskLabel4, 10);
             ApplyRoundedCorners(addTaskButton, 10);
             displayTasks();
         }
@@ -87,7 +80,7 @@ namespace Calendar
             Calendar.monthViewBool = true;
             Calendar.weekViewBool = false;
             Calendar.dayViewBool = false;
-            //autoAddTaskTimer.Start();
+            autoAddTaskTimer.Start();
             //lastAccessedDay = date;
             AddTaskPopUp popUp = new AddTaskPopUp();
             popUp.Show();
@@ -95,113 +88,80 @@ namespace Calendar
 
         public void displayTasks()
         {
+            tasksOutputted = 1;
             using (SQLiteConnection connection = new SQLiteConnection(sqlConnection))
             {
                 connection.Open();
 
-                String sql = "SELECT * FROM Task WHERE TaskDate = ?";
+                String sql = "SELECT * FROM Task WHERE TaskDate = ? AND UserId = ?";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(sql, connection))
                 {
                     cmd.Parameters.AddWithValue("TaskDate", Calendar.staticMonth + "/" + dayNumberLabel.Text + "/" + Calendar.staticYear);
+                    cmd.Parameters.AddWithValue("UserId", logInPage.userID);
 
                     using (SQLiteDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.HasRows)
                         {
-                            while (reader.Read() && tasksOutputted <= 4)
+                            while (reader.Read() && tasksOutputted <= 14)
                             {
-                                switch (tasksOutputted)
-                                {
-                                    case 1:
-                                        taskLabel1.Text = reader["TaskName"].ToString();
-                                        //taskLabel1.BackColor = Color.FromArgb(100, Color.DarkRed);
-                                        taskLabel1.BackColor = Color.FromArgb(100, Color.LightGray);
-                                        //taskLabel1.Update();
-                                        taskOneLoaded = true;
-                                        break;
-                                    case 2:
-                                        taskLabel2.Text = reader["TaskName"].ToString();
-                                        
-                                        //taskLabel2.BackColor = Color.FromArgb(100, Color.Coral);
-                                        taskLabel2.BackColor = Color.FromArgb(100, Color.LightGray);
-                                        taskTwoLoaded = true;
-                                        break;
-                                    case 3:
-                                        taskLabel3.Text = reader["TaskName"].ToString();
-                                        //taskLabel3.BackColor = Color.FromArgb(100, Color.SpringGreen);
-                                        taskLabel3.BackColor = Color.FromArgb(100, Color.LightGray);
-                                        taskThreeLoaded = true;
-                                        break;
-                                    case 4:
-                                        taskLabel4.Text = reader["TaskName"].ToString();
-                                        //taskLabel4.BackColor = Color.FromArgb(100, Color.Aqua);
-                                        taskLabel4.BackColor = Color.FromArgb(100, Color.LightGray);
-                                        taskFourLoaded = true;
-                                        break;
+                                string task = "taskLabel" + tasksOutputted;
 
+                                Control control = Controls.Find(task, true).FirstOrDefault();
+
+                                if (control != null && control is System.Windows.Forms.Label label)
+                                {
+                                    label.Text = reader["TaskName"].ToString();
+                                    label.BackColor = Color.FromArgb(100, 145, 170, 252);
+                                    ApplyRoundedCorners(label, 10);
                                 }
                                 tasksOutputted++;
                             }
+
                         }
+
                     }
                 }
             }
         }
 
-        public void UpdateTaskLabel(string taskName)
+        private void taskLabel_Click(object sender, EventArgs e)
         {
-                taskLabel1.Text = taskName;
-                taskLabel1.BackColor = Color.FromArgb(100, Color.LightGray);
-                taskLabel1.Refresh();
-        }
-
-        private void tasksFlowPanel_Click(object sender, EventArgs e)
-        {
-            staticDay = dayNumberLabel.Text;
-        }
-
-        private void taskLabel1_Click(object sender, EventArgs e)
-        {
-            if (taskOneLoaded)
+            if (sender is System.Windows.Forms.Label clickedLabel)
             {
-                staticDay = dayNumberLabel.Text;
-                taskSelected = taskLabel1.Text;
-                TaskPreviewWindow taskPreviewWindow = new TaskPreviewWindow();  
-                taskPreviewWindow.Show();
-                
-            }
-        }
-        private void taskLabel2_Click(object sender, EventArgs e)
-        {
-            if (taskTwoLoaded)
-            {
-                staticDay = dayNumberLabel.Text;
-                taskSelected = taskLabel2.Text;
-                TaskPreviewWindow taskPreviewWindow = new TaskPreviewWindow(); 
-                taskPreviewWindow.Show();
+                // Get the label's number from its name
+                if (int.TryParse(clickedLabel.Name.Replace("taskLabel", ""), out int labelNumber))
+                {
+                    staticDay = dayNumberLabel.Text;
+                    taskSelected = clickedLabel.Text;
+                    TaskPreviewWindow taskPreviewWindow = new TaskPreviewWindow();
+                    taskPreviewWindow.Show();
+                }
             }
         }
 
-        private void taskLabel3_Click(object sender, EventArgs e)
+        private void task_MouseEnter(object sender, EventArgs e)
         {
-            if (taskThreeLoaded)
+            if (sender is System.Windows.Forms.Label clickedLabel)
             {
-                staticDay = dayNumberLabel.Text;
-                taskSelected = taskLabel3.Text;
-                TaskPreviewWindow taskPreviewWindow = new TaskPreviewWindow();
-                taskPreviewWindow.Show();
+                if (!clickedLabel.Text.Equals(""))
+                {
+                    clickedLabel.BackColor = Color.FromArgb(150, 145, 170, 252);
+                }
+
             }
+
         }
 
-        private void taskLabel4_Click(object sender, EventArgs e)
+        private void task_MouseLeave(object sender, EventArgs e)
         {
-            if (taskFourLoaded)
+            if (sender is System.Windows.Forms.Label clickedLabel)
             {
-                staticDay = dayNumberLabel.Text;
-                taskSelected = taskLabel4.Text;
-                TaskPreviewWindow taskPreviewWindow = new TaskPreviewWindow();
-                taskPreviewWindow.Show();
+                if (!clickedLabel.Text.Equals(""))
+                {
+                    clickedLabel.BackColor = Color.FromArgb(100, 145, 170, 252);
+                }
             }
         }
 
@@ -215,60 +175,11 @@ namespace Calendar
             addTaskButton.BackColor = Color.White;
         }
 
-        private void taskLabel1_MouseEnter(object sender, EventArgs e)
-        {
-            if (taskOneLoaded)
-                taskLabel1.BackColor = Color.FromArgb(100, Color.DarkGray); 
-        }
-
-        private void taskLabel1_MouseLeave(object sender, EventArgs e)
-        {
-            if (taskOneLoaded)
-                taskLabel1.BackColor = Color.FromArgb(100, Color.LightGray);
-        }
-
-        private void taskLabel4_MouseEnter(object sender, EventArgs e)
-        {
-            if (taskFourLoaded)
-                taskLabel4.BackColor = Color.FromArgb(100, Color.DarkGray);
-        }
-
-        private void taskLabel4_MouseLeave(object sender, EventArgs e)
-        {
-            if (taskFourLoaded)
-                taskLabel4.BackColor = Color.FromArgb(100, Color.LightGray);
-        }
-
-        private void taskLabel3_MouseEnter(object sender, EventArgs e)
-        {
-            if (taskThreeLoaded)
-                taskLabel3.BackColor = Color.FromArgb(100, Color.DarkGray);
-        }
-
-        private void taskLabel3_MouseLeave(object sender, EventArgs e)
-        {
-            if (taskThreeLoaded)
-                taskLabel3.BackColor = Color.FromArgb(100, Color.LightGray);
-        }
-
-        private void taskLabel2_MouseEnter(object sender, EventArgs e)
-        {
-            if (taskTwoLoaded)
-                taskLabel2.BackColor = Color.FromArgb(100, Color.DarkGray);
-        }
-
-        private void taskLabel2_MouseLeave(object sender, EventArgs e)
-        {
-            if (taskTwoLoaded)
-                taskLabel2.BackColor = Color.FromArgb(100, Color.LightGray);
-        }
-
         private void autoAddTaskTimer_Tick(object sender, EventArgs e)
         {
-            addingNewTask = true;
-            addingNewTaskTrigger = 0;
+            //addingNewTask = true;
+            //addingNewTaskTrigger = 0;
             displayTasks();
-            
         }
     }
 }

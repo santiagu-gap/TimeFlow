@@ -24,7 +24,7 @@ namespace Calendar
         // Static variable to pass to another form
         public static string staticMonth, staticYear;
 
-        public static bool monthViewBool = false;
+        public static bool monthViewBool = true;
         public static bool weekViewBool = false;
         public static bool dayViewBool = false;
 
@@ -57,7 +57,15 @@ namespace Calendar
 
         public void displayMonthDays()
         {
-            loadLabels();
+            if (!logInPage.isFrench)
+            {
+                loadLabels();
+            }
+            else
+            {
+                loadFrenchLabels();
+            }
+            
 
             daysContainer.Controls.Clear();
             // Creating DateTime object to access functions regarding dates
@@ -101,7 +109,16 @@ namespace Calendar
 
         private void displayWeekDays()
         {
-            loadLabels();
+
+            if (!logInPage.isFrench)
+            {
+                loadLabels();
+            }
+            else
+            {
+                loadFrenchLabels();
+            }
+
             // Clear day container before loading new week
             daysContainer.Controls.Clear();
 
@@ -222,6 +239,11 @@ namespace Calendar
             monthMode = false;
             weekMode = false;
             dayMode = true;
+
+            monthViewBool = false;
+            weekViewBool = false;
+            dayViewBool = true;
+
             displayDayMode();
         }
 
@@ -230,6 +252,11 @@ namespace Calendar
             dayMode = false;
             monthMode = false;
             weekMode = true;
+
+            monthViewBool = false;
+            weekViewBool = true;
+            dayViewBool = false;
+
             displayWeekDays();
         }
 
@@ -238,6 +265,11 @@ namespace Calendar
             dayMode = false;
             weekMode = false;
             monthMode = true;
+
+            monthViewBool = true;
+            weekViewBool = false;
+            dayViewBool = false;
+
             displayMonthDays();
         }
 
@@ -272,6 +304,7 @@ namespace Calendar
             previousButton.BackColor = Color.LightGray;
         }
 
+
         private void loadLabels()
         {
             sundayLabel.Text = "Sunday";
@@ -281,6 +314,16 @@ namespace Calendar
             thursdayLabel.Text = "Thursday";
             fridayLabel.Text = "Friday";
             saturdayLabel.Text = "Saturday";
+        }
+        private void loadFrenchLabels()
+        {
+            sundayLabel.Text = "Dimanche";
+            mondayLabel.Text = "Lundi";
+            tuesdayLabel.Text = "Mardi";
+            wednesdayLabel.Text = "Mercredi";
+            thursdayLabel.Text = "Jeudi";
+            fridayLabel.Text = "Vendredi";
+            saturdayLabel.Text = "Samedi";
         }
 
         private void ApplyRoundedCorners(Control control, int radius)

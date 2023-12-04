@@ -70,3 +70,12 @@ E:\Semester_3\ApplicationDevelopment\Project_TimeFlow\Calendar\Calendar\obj\Debu
 E:\Semester_3\ApplicationDevelopment\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.exe
 E:\Semester_3\ApplicationDevelopment\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.pdb
 F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.PracticeForm.resources
+F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.logInPage.resources
+F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.usernameRequirements.resources
+F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.accountInformationForm.resources
+F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.changePassword.resources
+D:\Semester_3\ApplicationDevelopment\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.accountInformationForm.resources
+D:\Semester_3\ApplicationDevelopment\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.changePassword.resources
+D:\Semester_3\ApplicationDevelopment\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.logInPage.resources
+D:\Semester_3\ApplicationDevelopment\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.PracticeForm.resources
+D:\Semester_3\ApplicationDevelopment\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.usernameRequirements.resources
