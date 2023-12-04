@@ -29,6 +29,11 @@ namespace Calendar
         public bool taskThreeLoaded = false;
         int tasksOutputted = 1;
         public static string lastAccessedDay;
+        public static bool UnlabeledPriority = true;
+        public static bool Priority1 = true;
+        public static bool Priority2 = true;
+        public static bool Priority3 = true;
+        public static bool Priority4 = true;
         public UserControlDay()
         {
             InitializeComponent();

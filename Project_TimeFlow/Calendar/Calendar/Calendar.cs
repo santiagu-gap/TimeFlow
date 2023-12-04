@@ -315,6 +315,13 @@ namespace Calendar
             fridayLabel.Text = "Friday";
             saturdayLabel.Text = "Saturday";
         }
+
+        private void FilterButton_Click(object sender, EventArgs e)
+        {
+            Filter filter = new Filter();
+            filter.Show();
+        }
+
         private void loadFrenchLabels()
         {
             sundayLabel.Text = "Dimanche";

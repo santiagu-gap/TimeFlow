@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Data.SQLite;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -82,17 +83,40 @@ namespace Calendar
 
         private void UpdateTaskPriority(object sender, EventArgs e)
         {
+            ToolStripMenuItem menuItem = (ToolStripMenuItem)sender;
+            Tuple<int, int> data = (Tuple<int, int>)menuItem.Tag;
 
+            int taskId = data.Item1;
+            int priority = data.Item2;
+
+            using (SQLiteConnection connection = new SQLiteConnection(sqlConnection))
+            {
+                connection.Open();
+
+                String updateSql = "UPDATE Task SET Priority = @Priority WHERE TaskId = @TaskId";
+
+                using (SQLiteCommand updateCmd = new SQLiteCommand(updateSql, connection))
+                {
+                    updateCmd.Parameters.AddWithValue("@TaskId", taskId);
+                    updateCmd.Parameters.AddWithValue("@Priority", priority);
+
+                    updateCmd.ExecuteNonQuery();
+                }
+            }
+
+            LoadTasksIntoListViews();
         }
 
         private void LoadTasksIntoListViews()
         {
 
             ListView[] priorityBoxes = { PriorityView1, PriorityView2, PriorityView3, PriorityView4 };
+            
 
             foreach (ListView listView in priorityBoxes)
             {
                 listView.Items.Clear(); // Clear all items in the ListView
+                
             }
 
             using (SQLiteConnection connection = new SQLiteConnection(sqlConnection))
@@ -121,6 +145,27 @@ namespace Calendar
                     }
                 }
             }
+        }
+    
+
+
+private void ApplyRoundedCorners(Control control, int radius)
+        {
+            GraphicsPath path = new GraphicsPath();
+            path.AddArc(0, 0, radius, radius, 180, 90);
+            path.AddArc(control.Width - radius, 0, radius, radius, 270, 90);
+            path.AddArc(control.Width - radius, control.Height - radius, radius, radius, 0, 90);
+            path.AddArc(0, control.Height - radius, radius, radius, 90, 90);
+
+            control.Region = new Region(path);
+        }
+
+        private void PriorityMatrix_Load(object sender, EventArgs e)
+        {
+            ApplyRoundedCorners(PriorityView1, 10);
+            ApplyRoundedCorners(PriorityView2, 10);
+            ApplyRoundedCorners(PriorityView4, 10);
+            ApplyRoundedCorners(PriorityView3, 10);
         }
     }
 }

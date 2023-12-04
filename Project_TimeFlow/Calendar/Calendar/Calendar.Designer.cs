@@ -43,6 +43,7 @@
             this.monthModeButton = new System.Windows.Forms.Button();
             this.nextButton = new System.Windows.Forms.Label();
             this.previousButton = new System.Windows.Forms.Label();
+            this.FilterButton = new System.Windows.Forms.Button();
             this.daysContainer.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +51,7 @@
             // 
             this.daysContainer.Controls.Add(this.panel1);
             this.daysContainer.Location = new System.Drawing.Point(4, 109);
-            this.daysContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.daysContainer.Margin = new System.Windows.Forms.Padding(2);
             this.daysContainer.Name = "daysContainer";
             this.daysContainer.Size = new System.Drawing.Size(1272, 691);
             this.daysContainer.TabIndex = 0;
@@ -58,7 +59,7 @@
             // panel1
             // 
             this.panel1.Location = new System.Drawing.Point(2, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1270, 689);
             this.panel1.TabIndex = 0;
@@ -158,7 +159,7 @@
             this.dayModeButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dayModeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(114)))), ((int)(((byte)(250)))));
             this.dayModeButton.Location = new System.Drawing.Point(1016, 13);
-            this.dayModeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dayModeButton.Margin = new System.Windows.Forms.Padding(2);
             this.dayModeButton.Name = "dayModeButton";
             this.dayModeButton.Size = new System.Drawing.Size(83, 32);
             this.dayModeButton.TabIndex = 9;
@@ -173,7 +174,7 @@
             this.weekModeButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.weekModeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(114)))), ((int)(((byte)(250)))));
             this.weekModeButton.Location = new System.Drawing.Point(1103, 13);
-            this.weekModeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.weekModeButton.Margin = new System.Windows.Forms.Padding(2);
             this.weekModeButton.Name = "weekModeButton";
             this.weekModeButton.Size = new System.Drawing.Size(83, 32);
             this.weekModeButton.TabIndex = 10;
@@ -188,7 +189,7 @@
             this.monthModeButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.monthModeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(114)))), ((int)(((byte)(250)))));
             this.monthModeButton.Location = new System.Drawing.Point(1190, 13);
-            this.monthModeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.monthModeButton.Margin = new System.Windows.Forms.Padding(2);
             this.monthModeButton.Name = "monthModeButton";
             this.monthModeButton.Size = new System.Drawing.Size(83, 32);
             this.monthModeButton.TabIndex = 11;
@@ -228,11 +229,27 @@
             this.previousButton.MouseEnter += new System.EventHandler(this.previousButton_MouseEnter);
             this.previousButton.MouseLeave += new System.EventHandler(this.previousButton_MouseLeave);
             // 
+            // FilterButton
+            // 
+            this.FilterButton.BackColor = System.Drawing.Color.White;
+            this.FilterButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FilterButton.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FilterButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(114)))), ((int)(((byte)(250)))));
+            this.FilterButton.Location = new System.Drawing.Point(11, 8);
+            this.FilterButton.Margin = new System.Windows.Forms.Padding(2);
+            this.FilterButton.Name = "FilterButton";
+            this.FilterButton.Size = new System.Drawing.Size(83, 32);
+            this.FilterButton.TabIndex = 14;
+            this.FilterButton.Text = "Filter";
+            this.FilterButton.UseVisualStyleBackColor = false;
+            this.FilterButton.Click += new System.EventHandler(this.FilterButton_Click);
+            // 
             // Calendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 800);
+            this.Controls.Add(this.FilterButton);
             this.Controls.Add(this.nextButton);
             this.Controls.Add(this.previousButton);
             this.Controls.Add(this.monthModeButton);
@@ -247,7 +264,7 @@
             this.Controls.Add(this.mondayLabel);
             this.Controls.Add(this.sundayLabel);
             this.Controls.Add(this.daysContainer);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Calendar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
@@ -275,6 +292,7 @@
         private System.Windows.Forms.Label nextButton;
         private System.Windows.Forms.Label previousButton;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button FilterButton;
     }
 }
 
