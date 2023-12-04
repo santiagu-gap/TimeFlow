@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.daysContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.sundayLabel = new System.Windows.Forms.Label();
@@ -44,6 +45,7 @@
             this.nextButton = new System.Windows.Forms.Label();
             this.previousButton = new System.Windows.Forms.Label();
             this.FilterButton = new System.Windows.Forms.Button();
+            this.autoRefreshTimer = new System.Windows.Forms.Timer(this.components);
             this.daysContainer.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -244,6 +246,11 @@
             this.FilterButton.UseVisualStyleBackColor = false;
             this.FilterButton.Click += new System.EventHandler(this.FilterButton_Click);
             // 
+            // autoRefreshTimer
+            // 
+            this.autoRefreshTimer.Interval = 500;
+            this.autoRefreshTimer.Tick += new System.EventHandler(this.autoRefreshTimer_Tick);
+            // 
             // Calendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,6 +300,7 @@
         private System.Windows.Forms.Label previousButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button FilterButton;
+        private System.Windows.Forms.Timer autoRefreshTimer;
     }
 }
 

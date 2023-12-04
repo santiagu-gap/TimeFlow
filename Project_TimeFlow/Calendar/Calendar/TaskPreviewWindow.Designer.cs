@@ -37,6 +37,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.okButton = new System.Windows.Forms.Button();
             this.dateBox = new System.Windows.Forms.Label();
+            this.categoryBox = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.exitButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -47,10 +49,9 @@
             this.taskSubject.AutoSize = true;
             this.taskSubject.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taskSubject.ForeColor = System.Drawing.Color.Black;
-            this.taskSubject.Location = new System.Drawing.Point(43, 105);
-            this.taskSubject.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.taskSubject.Location = new System.Drawing.Point(32, 85);
             this.taskSubject.Name = "taskSubject";
-            this.taskSubject.Size = new System.Drawing.Size(174, 37);
+            this.taskSubject.Size = new System.Drawing.Size(143, 30);
             this.taskSubject.TabIndex = 0;
             this.taskSubject.Text = "Task Name";
             // 
@@ -59,9 +60,10 @@
             this.taskDescriptionTextBox.BackColor = System.Drawing.Color.White;
             this.taskDescriptionTextBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.taskDescriptionTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.taskDescriptionTextBox.Location = new System.Drawing.Point(48, 198);
+            this.taskDescriptionTextBox.Location = new System.Drawing.Point(35, 245);
+            this.taskDescriptionTextBox.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.taskDescriptionTextBox.Name = "taskDescriptionTextBox";
-            this.taskDescriptionTextBox.Size = new System.Drawing.Size(755, 244);
+            this.taskDescriptionTextBox.Size = new System.Drawing.Size(566, 198);
             this.taskDescriptionTextBox.TabIndex = 0;
             this.taskDescriptionTextBox.Text = "label1";
             // 
@@ -73,16 +75,18 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(856, 53);
+            this.panel1.Size = new System.Drawing.Size(642, 43);
             this.panel1.TabIndex = 8;
             // 
             // exitButton
             // 
             this.exitButton.Image = ((System.Drawing.Image)(resources.GetObject("exitButton.Image")));
-            this.exitButton.Location = new System.Drawing.Point(819, 17);
+            this.exitButton.Location = new System.Drawing.Point(614, 14);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(2);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(20, 20);
+            this.exitButton.Size = new System.Drawing.Size(15, 16);
             this.exitButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.exitButton.TabIndex = 13;
             this.exitButton.TabStop = false;
@@ -93,9 +97,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(11, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(8, 6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.Size = new System.Drawing.Size(30, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 12;
             this.pictureBox1.TabStop = false;
@@ -105,9 +110,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Candara", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(52, 11);
+            this.label5.Location = new System.Drawing.Point(39, 9);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 28);
+            this.label5.Size = new System.Drawing.Size(115, 23);
             this.label5.TabIndex = 11;
             this.label5.Text = "Task Preview";
             // 
@@ -117,9 +123,10 @@
             this.okButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.okButton.Font = new System.Drawing.Font("Candara", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.okButton.ForeColor = System.Drawing.Color.White;
-            this.okButton.Location = new System.Drawing.Point(680, 485);
+            this.okButton.Location = new System.Drawing.Point(507, 479);
+            this.okButton.Margin = new System.Windows.Forms.Padding(2);
             this.okButton.Name = "okButton";
-            this.okButton.Size = new System.Drawing.Size(123, 42);
+            this.okButton.Size = new System.Drawing.Size(92, 34);
             this.okButton.TabIndex = 9;
             this.okButton.Text = "OK";
             this.okButton.UseVisualStyleBackColor = false;
@@ -129,25 +136,49 @@
             // 
             this.dateBox.BackColor = System.Drawing.Color.White;
             this.dateBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateBox.Location = new System.Drawing.Point(47, 148);
+            this.dateBox.Location = new System.Drawing.Point(35, 120);
+            this.dateBox.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dateBox.Name = "dateBox";
-            this.dateBox.Size = new System.Drawing.Size(753, 34);
+            this.dateBox.Size = new System.Drawing.Size(565, 28);
             this.dateBox.TabIndex = 10;
             this.dateBox.Text = "label1";
             // 
+            // categoryBox
+            // 
+            this.categoryBox.BackColor = System.Drawing.Color.White;
+            this.categoryBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryBox.Location = new System.Drawing.Point(35, 200);
+            this.categoryBox.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.categoryBox.Name = "categoryBox";
+            this.categoryBox.Size = new System.Drawing.Size(565, 28);
+            this.categoryBox.TabIndex = 12;
+            this.categoryBox.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(33, 179);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 21);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Category";
+            // 
             // TaskPreviewWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(856, 541);
+            this.ClientSize = new System.Drawing.Size(642, 538);
+            this.Controls.Add(this.categoryBox);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.dateBox);
             this.Controls.Add(this.okButton);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.taskDescriptionTextBox);
             this.Controls.Add(this.taskSubject);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TaskPreviewWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TaskPreviewWindow";
@@ -171,5 +202,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button okButton;
         private System.Windows.Forms.Label dateBox;
+        private System.Windows.Forms.Label categoryBox;
+        private System.Windows.Forms.Label label2;
     }
 }

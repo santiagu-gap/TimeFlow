@@ -109,7 +109,7 @@ namespace Calendar
                     {
                         if (reader.HasRows)
                         {
-                            while (reader.Read() && tasksOutputted <= 14)
+                            while (reader.Read() && tasksOutputted <= 3)
                             {
                                 int priority = Convert.ToInt32(reader["Priority"]);
 
@@ -159,46 +159,6 @@ namespace Calendar
             }
         }
 
-        /*        public void displayTasks()
-                {
-                    tasksOutputted = 1;
-                    using (SQLiteConnection connection = new SQLiteConnection(sqlConnection))
-                    {
-                        connection.Open();
-
-                        String sql = "SELECT * FROM Task WHERE TaskDate = ? AND UserId = ?";
-
-                        using (SQLiteCommand cmd = new SQLiteCommand(sql, connection))
-                        {
-                            cmd.Parameters.AddWithValue("TaskDate", Calendar.staticMonth + "/" + dayNumberLabel.Text + "/" + Calendar.staticYear);
-                            cmd.Parameters.AddWithValue("UserId", logInPage.userID);
-
-                            using (SQLiteDataReader reader = cmd.ExecuteReader())
-                            {
-                                if (reader.HasRows)
-                                {
-                                    while (reader.Read() && tasksOutputted <= 14)
-                                    {
-                                        string task = "taskLabel" + tasksOutputted;
-
-                                        Control control = Controls.Find(task, true).FirstOrDefault();
-
-                                        if (control != null && control is System.Windows.Forms.Label label)
-                                        {
-                                            label.Text = reader["TaskName"].ToString();
-                                            label.BackColor = Color.FromArgb(100, 145, 170, 252);
-                                            ApplyRoundedCorners(label, 10);
-                                        }
-                                        tasksOutputted++;
-                                    }
-
-                                }
-
-                            }
-                        }
-                    }
-                }
-        */
         private void taskLabel_Click(object sender, EventArgs e)
         {
             if (sender is System.Windows.Forms.Label clickedLabel)
@@ -250,8 +210,6 @@ namespace Calendar
 
         private void autoAddTaskTimer_Tick(object sender, EventArgs e)
         {
-            //addingNewTask = true;
-            //addingNewTaskTrigger = 0;
             displayTasks();
         }
     }

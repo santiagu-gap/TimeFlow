@@ -23,44 +23,19 @@ namespace Calendar
 
         private void TaskPreviewWindow_Load(object sender, EventArgs e)
         {
-            if (Calendar.monthViewBool)
-            {
-                dateBox.Text = Calendar.staticMonth + "/" + UserControlDay.staticDay + "/" + Calendar.staticYear;
-            }
-
-            if (Calendar.weekViewBool)
-            {
-                dateBox.Text = Calendar.staticMonth + "/" + UserControlWeekDay.staticDay + "/" + Calendar.staticYear;
-            }
-
-            if (Calendar.dayViewBool)
-            {
-                dateBox.Text = Calendar.staticMonth + "/" + UserControlDayView.staticDay + "/" + Calendar.staticYear;
-            }
+            dateBox.Text = Calendar.staticMonth + "/" + UserControlDay.staticDay + "/" + Calendar.staticYear;
 
             using (SQLiteConnection connection = new SQLiteConnection(sqlConnection))
             {
                 connection.Open();
 
-                String sql = "SELECT * FROM Task WHERE TaskName = ? AND TaskDate = ?";
+                String sql = "SELECT Task.*, Categories.CategoryName " +
+                             "FROM Task LEFT JOIN Categories ON Task.CategoryId = Categories.CategoryId " +
+                             "WHERE Task.TaskName = ? AND Task.TaskDate = ?";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(sql, connection))
                 {
-                    if (Calendar.monthViewBool)
-                    {
-                        cmd.Parameters.AddWithValue("TaskName",UserControlDay.taskSelected);
-                    }
-
-                    if (Calendar.weekViewBool)
-                    {
-                        cmd.Parameters.AddWithValue("TaskName", UserControlWeekDay.taskSelected);
-                    }
-
-                    if (Calendar.dayViewBool)
-                    {
-                        cmd.Parameters.AddWithValue("TaskName", UserControlDayView.taskSelected);
-                    }
-
+                    cmd.Parameters.AddWithValue("TaskName", UserControlDay.taskSelected);
                     cmd.Parameters.AddWithValue("TaskDate", dateBox.Text);
 
                     using (SQLiteDataReader reader = cmd.ExecuteReader())
@@ -71,13 +46,16 @@ namespace Calendar
                             {
                                 taskDescriptionTextBox.Text = reader["TaskDescription"].ToString();
                                 taskSubject.Text = reader["TaskName"].ToString();
+
+                                // Check if "CategoryName" is null and set the categoryBox.Text accordingly
+                                categoryBox.Text = reader["CategoryName"] != DBNull.Value
+                                    ? reader["CategoryName"].ToString()
+                                    : "none";
                             }
-                             
                         }
                     }
                 }
             }
-            ApplyRoundedCorners(this, 20);
         }
 
         private void okButton_Click(object sender, EventArgs e)
@@ -109,6 +87,5 @@ namespace Calendar
 
             control.Region = new Region(path);
         }
-
     }
 }

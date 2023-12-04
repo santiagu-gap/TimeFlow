@@ -19,6 +19,11 @@ namespace Calendar
         public static string staticDay;
         public static string taskSelected;
         int tasksOutputted = 1;
+        public static bool UnlabeledPriority = true;
+        public static bool Priority1 = true;
+        public static bool Priority2 = true;
+        public static bool Priority3 = true;
+        public static bool Priority4 = true;
         public UserControlWeekDay()
         {
             InitializeComponent();
@@ -74,7 +79,7 @@ namespace Calendar
             {
                 connection.Open();
 
-                String sql = "SELECT * FROM Task WHERE TaskDate = ? AND UserId = ?";
+                String sql = "SELECT * FROM Task WHERE TaskDate = ? AND UserId = ? AND (CategoryId IS NULL OR CategoryId IN (SELECT CategoryId FROM Categories WHERE IsChecked = 1))";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(sql, connection))
                 {
@@ -87,21 +92,49 @@ namespace Calendar
                         {
                             while (reader.Read() && tasksOutputted <= 14)
                             {
-                                string task = "taskLabel" + tasksOutputted;
+                                int priority = Convert.ToInt32(reader["Priority"]);
 
-                                Control control = Controls.Find(task, true).FirstOrDefault();
-
-                                if (control != null && control is System.Windows.Forms.Label label)
+                                // Check Priority and boolean flags
+                                bool displayTask = false;
+                                if (priority == 0) // Unlabeled
                                 {
-                                    label.Text = reader["TaskName"].ToString();
-                                    label.BackColor = Color.FromArgb(100, 145, 170, 252);
-                                    ApplyRoundedCorners(label, 10);
+                                    displayTask = UnlabeledPriority;
                                 }
-                                tasksOutputted++;
+                                else // Labeled with Priority
+                                {
+                                    switch (priority)
+                                    {
+                                        case 1:
+                                            displayTask = Priority1;
+                                            break;
+                                        case 2:
+                                            displayTask = Priority2;
+                                            break;
+                                        case 3:
+                                            displayTask = Priority3;
+                                            break;
+                                        case 4:
+                                            displayTask = Priority4;
+                                            break;
+                                    }
+                                }
+
+                                if (displayTask)
+                                {
+                                    string taskLabel = "taskLabel" + tasksOutputted;
+
+                                    Control control = Controls.Find(taskLabel, true).FirstOrDefault();
+
+                                    if (control != null && control is System.Windows.Forms.Label label)
+                                    {
+                                        label.Text = reader["TaskName"].ToString();
+                                        label.BackColor = Color.FromArgb(100, 145, 170, 252);
+                                        ApplyRoundedCorners(label, 10);
+                                    }
+                                    tasksOutputted++;
+                                }
                             }
-
                         }
-
                     }
                 }
             }

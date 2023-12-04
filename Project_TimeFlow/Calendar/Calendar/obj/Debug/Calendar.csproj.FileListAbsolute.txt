@@ -138,3 +138,4 @@ C:\Users\2244969\Documents\GitHub\TimeFlow\Project_TimeFlow\Calendar\Calendar\ob
 C:\Users\2244969\Documents\GitHub\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.exe
 C:\Users\2244969\Documents\GitHub\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.pdb
 C:\Users\2244969\Documents\GitHub\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.PriorityMatrix.resources
+C:\Users\2244969\Documents\GitHub\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.Filter.resources

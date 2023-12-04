@@ -318,7 +318,9 @@ namespace Calendar
 
         private void FilterButton_Click(object sender, EventArgs e)
         {
+            autoRefreshTimer.Stop();
             Filter filter = new Filter();
+            filter.FormClosed += (s, args) => autoRefreshTimer.Start();
             filter.Show();
         }
 
@@ -342,6 +344,26 @@ namespace Calendar
             path.AddArc(0, control.Height - radius, radius, radius, 90, 90);
 
             control.Region = new Region(path);
+        }
+        private void autoRefreshTimer_Tick(object sender, EventArgs e)
+        {
+
+            if (monthMode)
+            {
+                autoRefreshTimer.Stop();
+                displayMonthDays();
+            }
+
+            if (weekMode)
+            {
+                autoRefreshTimer.Stop();
+                displayWeekDays();
+            }
+            if (dayMode)
+            {
+                autoRefreshTimer.Stop();
+                displayDayMode();
+            }
         }
 
     }

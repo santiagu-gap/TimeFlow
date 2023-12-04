@@ -116,6 +116,7 @@ namespace Calendar
 
                         transaction.Commit(); // Commit the transaction
                         MessageBox.Show("Saved!");
+                        this.Close();
                     }
                     catch (Exception ex)
                     {
@@ -127,59 +128,6 @@ namespace Calendar
             }
         }
 
-        /*        private void saveTaskButton_Click(object sender, EventArgs e)
-                {
-                    using (SQLiteConnection connection = new SQLiteConnection(sqlConnection))
-                    {
-                        connection.Open();
-
-                        using (SQLiteTransaction transaction = connection.BeginTransaction())
-                        {
-                            try
-                            {
-                                String sql = "INSERT INTO Task(TaskName, TaskDescription, TaskDate, UserId) VALUES (?, ?, ?, ?)";
-
-                                SQLiteCommand cmd = connection.CreateCommand();
-                                cmd.CommandText = sql;
-
-                                cmd.Parameters.AddWithValue("TaskName", taskSubject.Text);
-                                cmd.Parameters.AddWithValue("TaskDescription", taskDescription.Text);
-                                cmd.Parameters.AddWithValue("TaskDate", selectedDate.Text);
-                                cmd.Parameters.AddWithValue("UserId", logInPage.userID);
-
-                                cmd.ExecuteNonQuery();
-
-
-                                string taskName = taskSubject.Text;
-                                UserControlDay uc = new UserControlDay();
-
-                                //uc.UpdateTaskLabel(taskName);
-
-
-                                transaction.Commit(); // Commit the transaction
-                                MessageBox.Show("Saved!");
-
-                                this.Close();
-
-
-                                //label1.Text = UserControlDay.lastAccessedDay.ToString();
-
-
-                                //UserControlDay day = new UserControlDay(UserControlDay.lastAccessedDay);
-                                //day.Refresh();
-
-                            }
-                            catch (Exception ex)
-                            {
-                                // Handle exceptions appropriately
-                                MessageBox.Show($"Error: {ex.Message}");
-                                transaction.Rollback(); // Rollback the transaction if an error occurs
-                            }
-                        }
-                    }
-
-                }
-        */
         private void ApplyRoundedCorners(Control control, int radius)
 
         {

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,6 +69,7 @@ namespace Calendar
                 LoadCheckStates();
                 PriorityBox.ItemCheck += PriorityBox_ItemCheck; // Subscribe back to the event
             }
+            ApplyRoundedCorners(this, 30);
         }
 
         private void CategoriesList_ItemCheck(object sender, ItemCheckEventArgs e)
@@ -220,5 +222,25 @@ namespace Calendar
             }
         }
 
+        private void Filter_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ApplyRoundedCorners(Control control, int radius)
+        {
+            GraphicsPath path = new GraphicsPath();
+            path.AddArc(0, 0, radius, radius, 180, 90);
+            path.AddArc(control.Width - radius, 0, radius, radius, 270, 90);
+            path.AddArc(control.Width - radius, control.Height - radius, radius, radius, 0, 90);
+            path.AddArc(0, control.Height - radius, radius, radius, 90, 90);
+
+            control.Region = new Region(path);
+        }
     }
 }

@@ -181,6 +181,9 @@
     <EmbeddedResource Include="changePassword.resx">
       <DependentUpon>changePassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Filter.resx">
+      <DependentUpon>Filter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="logInPage.resx">
       <DependentUpon>logInPage.cs</DependentUpon>
     </EmbeddedResource>
