@@ -1,0 +1,30 @@
+C:\Users\Admin\Downloads\TimeFlow-master\TimeFlow-master\BaseForm\bin\Debug\BaseForm.exe.config
+C:\Users\Admin\Downloads\TimeFlow-master\TimeFlow-master\BaseForm\bin\Debug\BaseForm.exe
+C:\Users\Admin\Downloads\TimeFlow-master\TimeFlow-master\BaseForm\bin\Debug\BaseForm.pdb
+C:\Users\Admin\Downloads\TimeFlow-master\TimeFlow-master\BaseForm\obj\Debug\BaseForm.csproj.AssemblyReference.cache
+C:\Users\Admin\Downloads\TimeFlow-master\TimeFlow-master\BaseForm\obj\Debug\BaseForm.AddTaskControl.resources
+C:\Users\Admin\Downloads\TimeFlow-master\TimeFlow-master\BaseForm\obj\Debug\BaseForm.BaseModel.resources
+C:\Users\Admin\Downloads\TimeFlow-master\TimeFlow-master\BaseForm\obj\Debug\BaseForm.Form1.resources
+C:\Users\Admin\Downloads\TimeFlow-master\TimeFlow-master\BaseForm\obj\Debug\BaseForm.Properties.Resources.resources
+C:\Users\Admin\Downloads\TimeFlow-master\TimeFlow-master\BaseForm\obj\Debug\BaseForm.csproj.GenerateResource.cache
+C:\Users\Admin\Downloads\TimeFlow-master\TimeFlow-master\BaseForm\obj\Debug\BaseForm.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\TimeFlow-master\TimeFlow-master\BaseForm\obj\Debug\BaseForm.exe
+C:\Users\Admin\Downloads\TimeFlow-master\TimeFlow-master\BaseForm\obj\Debug\BaseForm.pdb
+C:\Users\Admin\Downloads\Sidebar & TaskUserControl\BaseForm\bin\Debug\BaseForm.exe.config
+C:\Users\Admin\Downloads\Sidebar & TaskUserControl\BaseForm\bin\Debug\BaseForm.exe
+C:\Users\Admin\Downloads\Sidebar & TaskUserControl\BaseForm\bin\Debug\BaseForm.pdb
+C:\Users\Admin\Downloads\Sidebar & TaskUserControl\BaseForm\bin\Debug\System.Data.SQLite.dll
+C:\Users\Admin\Downloads\Sidebar & TaskUserControl\BaseForm\bin\Debug\System.Data.SQLite.xml
+C:\Users\Admin\Downloads\Sidebar & TaskUserControl\BaseForm\obj\Debug\BaseForm.csproj.AssemblyReference.cache
+C:\Users\Admin\Downloads\Sidebar & TaskUserControl\BaseForm\obj\Debug\BaseForm.AddTaskControl.resources
+C:\Users\Admin\Downloads\Sidebar & TaskUserControl\BaseForm\obj\Debug\BaseForm.BaseModel.resources
+C:\Users\Admin\Downloads\Sidebar & TaskUserControl\BaseForm\obj\Debug\BaseForm.Form1.resources
+C:\Users\Admin\Downloads\Sidebar & TaskUserControl\BaseForm\obj\Debug\BaseForm.Properties.Resources.resources
+C:\Users\Admin\Downloads\Sidebar & TaskUserControl\BaseForm\obj\Debug\BaseForm.csproj.GenerateResource.cache
+C:\Users\Admin\Downloads\Sidebar & TaskUserControl\BaseForm\obj\Debug\BaseForm.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Downloads\Sidebar & TaskUserControl\BaseForm\obj\Debug\BaseForm.csproj.CopyComplete
+C:\Users\Admin\Downloads\Sidebar & TaskUserControl\BaseForm\obj\Debug\BaseForm.exe
+C:\Users\Admin\Downloads\Sidebar & TaskUserControl\BaseForm\obj\Debug\BaseForm.pdb
+C:\Users\Admin\Downloads\Sidebar & TaskUserControl\BaseForm\bin\Debug\Dapper.dll
+C:\Users\Admin\Downloads\Sidebar & TaskUserControl\BaseForm\bin\Debug\Dapper.xml
+C:\Users\Admin\Downloads\Sidebar & TaskUserControl\BaseForm\obj\Debug\BaseForm.TaskDisplay.resources
