@@ -107,6 +107,13 @@ namespace Calendar
             // Check if the new category name is not empty
             if (!string.IsNullOrEmpty(newCategoryNameString))
             {
+                // Check if the category already exists in the list
+                if (categoriesList.Items.Contains(newCategoryNameString))
+                {
+                    MessageBox.Show("Category already exists.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Exit the method if the category already exists
+                }
+
                 // Insert the new category into the "Categories" table in the database
                 using (SQLiteConnection connection = new SQLiteConnection(sqlConnection))
                 {
@@ -117,7 +124,6 @@ namespace Calendar
 
                     using (SQLiteCommand cmd = new SQLiteCommand(sql, connection))
                     {
-
                         cmd.Parameters.AddWithValue("@CategoryName", newCategoryNameString);
                         cmd.Parameters.AddWithValue("@UserId", userId);
 
@@ -127,7 +133,6 @@ namespace Calendar
                         int newCategoryId = Convert.ToInt32(cmd.ExecuteScalar());
 
                         categoryIdMap[newCategoryNameString + userId] = newCategoryId;
-
                     }
                 }
 
@@ -139,6 +144,7 @@ namespace Calendar
                 MessageBox.Show("Please enter a valid category name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
 
         private void deleteCategoryButton_Click(object sender, EventArgs e)

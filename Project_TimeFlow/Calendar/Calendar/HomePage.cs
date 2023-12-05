@@ -63,10 +63,12 @@ namespace Calendar
                 {
                     connection.Open();
 
-                    String sqlQuery = "Select TaskID,TaskName,TaskDescription, TaskDate FROM Task";
+                    String sqlQuery = "Select TaskID,TaskName, TaskDescription, TaskDate FROM Task where UserId = ?";
 
                     using (SQLiteCommand command = new SQLiteCommand(sqlQuery, connection))
                     {
+                        command.Parameters.AddWithValue("@UserId", logInPage.userID);
+
                         using (SQLiteDataReader reader = command.ExecuteReader())
                         {
                             while (reader.Read())
