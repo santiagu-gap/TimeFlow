@@ -21,9 +21,48 @@ namespace Calendar
             InitializeComponent();
             taskDateTimePicker.MinDate = DateTime.Now;
             dataOnLoad();
+            LoadCategories();
         }
         DataTable toDoList = new DataTable();
         bool IsEditing = false;
+
+        private void LoadCategories()
+        {
+
+            // Clear existing items and data in categoryBox
+            categoryBox.Items.Clear();
+            categoryBox.DisplayMember = "CategoryName";
+            categoryBox.ValueMember = "CategoryId";
+
+            using (SQLiteConnection connection = new SQLiteConnection(sqlConnection))
+            {
+                connection.Open();
+
+                // Assuming there's a common column named "UserId" in both "Categories" and "User" tables
+                String sql = "SELECT CategoryId, CategoryName FROM Categories WHERE UserId = @UserId";
+
+                using (SQLiteCommand cmd = new SQLiteCommand(sql, connection))
+                {
+                    cmd.Parameters.AddWithValue("@UserId", logInPage.userID);
+
+                    using (SQLiteDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            // Assuming that "CategoryName" and "CategoryId" are columns in the "Categories" table
+                            int categoryId = Convert.ToInt32(reader["CategoryId"]);
+                            string categoryName = reader["CategoryName"].ToString();
+
+                            // Create a new object to store both CategoryId and CategoryName
+                            var categoryItem = new { CategoryId = categoryId, CategoryName = categoryName };
+
+                            // Add the category to the categoryBox
+                            categoryBox.Items.Add(categoryItem);
+                        }
+                    }
+                }
+            }
+        }
 
         private void addTaskButton_Click(object sender, EventArgs e)
         {
@@ -38,15 +77,20 @@ namespace Calendar
                 {
                     try
                     {
-                        String sql = "INSERT INTO Task(TaskName, TaskDescription, TaskDate) VALUES (?, ?, ?)";
+
+                        int selectedCategoryId = (categoryBox.SelectedItem as dynamic)?.CategoryId ?? -1;
+
+                        String sql = "INSERT INTO Task(TaskName, TaskDescription, TaskDate, UserId, CategoryId) VALUES (?, ?, ?, ?, ?)";
 
                         SQLiteCommand cmd = connection.CreateCommand();
                         cmd.CommandText = sql;
 
                         cmd.Parameters.AddWithValue("TaskName", taskTitleTextbox.Text);
                         cmd.Parameters.AddWithValue("TaskDescription", taskDescriptionTextBox.Text);
-                        cmd.Parameters.AddWithValue("TaskDate", dateSelected.ToLongDateString());
-                        
+                        cmd.Parameters.AddWithValue("TaskDate", dateSelected.ToString("MMMM/d/yyyy").Replace("-", "/"));
+                        cmd.Parameters.AddWithValue("UserId", logInPage.userID);
+                        cmd.Parameters.AddWithValue("CategoryId", selectedCategoryId);  // Add CategoryId parameter
+
 
                         cmd.ExecuteNonQuery();
 

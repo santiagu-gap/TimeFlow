@@ -79,7 +79,7 @@ namespace Calendar
             {
                 connection.Open();
 
-                String sql = "SELECT * FROM Task WHERE TaskDate = ? AND UserId = ? AND (CategoryId IS NULL OR CategoryId IN (SELECT CategoryId FROM Categories WHERE IsChecked = 1))";
+                String sql = "SELECT * FROM Task WHERE TaskDate = ? AND UserId = ? AND (CategoryId IS NULL OR (CategoryId = -1) OR CategoryId IN (SELECT CategoryId FROM Categories WHERE IsChecked = 1))";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(sql, connection))
                 {
