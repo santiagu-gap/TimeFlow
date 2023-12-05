@@ -246,7 +246,6 @@
             this.Controls.Add(this.taskListFlowPanel);
             this.Name = "TaskPage";
             this.Text = "TaskPage";
-            this.Load += new System.EventHandler(this.TaskPage_Load);
             this.addTaskPanel.ResumeLayout(false);
             this.addTaskPanel.PerformLayout();
             this.panel1.ResumeLayout(false);

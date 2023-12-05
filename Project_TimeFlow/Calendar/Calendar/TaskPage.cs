@@ -114,9 +114,7 @@ namespace Calendar
             }
             try
             {
-                //TaskDisplay taskBox = new TaskDisplay(taskTitleTextbox.Text, deadline);
-                //taskBox.setData();
-                //taskListFlowPanel.Controls.Add(taskBox);
+                dataOnLoad();
                 taskDateTimePicker.MinDate = DateTime.Now;
 
 
@@ -138,28 +136,27 @@ namespace Calendar
 
         public void dataOnLoad()
         {
-            //TaskDisplay taskBox = new TaskDisplay();
             DateTime shortTime = new DateTime();
 
             using (SQLiteConnection connection = new SQLiteConnection(sqlConnection))
             {
                 try
                 {
-
-
                     connection.Open();
 
                     String sqlQuery = "Select TaskID,TaskName, TaskDescription, TaskDate FROM Task where UserId = ?";
-                    
 
                     using (SQLiteCommand command = new SQLiteCommand(sqlQuery, connection))
                     {
                         command.Parameters.AddWithValue("@UserId", logInPage.userID);
+
                         using (SQLiteDataReader reader = command.ExecuteReader())
                         {
+                            // Clear existing controls in taskListFlowPanel
+                            taskListFlowPanel.Controls.Clear();
+
                             while (reader.Read())
                             {
-
                                 try
                                 {
                                     string taskName = reader["TaskName"].ToString();
@@ -167,24 +164,20 @@ namespace Calendar
                                     string ID = reader["TaskID"].ToString();
                                     shortTime = DateTime.Parse(dueDate);
 
-
                                     TaskDisplay taskBox = new TaskDisplay(taskName, shortTime.ToShortDateString(), ID);
                                     taskBox.setData();
                                     taskListFlowPanel.Controls.Add(taskBox);
-
                                 }
                                 catch (Exception ex)
                                 {
                                     MessageBox.Show($"An error occurred: {ex.Message} {ex.StackTrace}");
                                 }
-
-
                             }
 
                             reader.Close();
                         }
-                        command.Dispose();
 
+                        command.Dispose();
                     }
                 }
                 catch (Exception ex)
@@ -195,10 +188,9 @@ namespace Calendar
                 {
                     connection.Close();
                 }
-
             }
-
         }
+
 
         private void ApplyRoundedCorners(Control control, int radius)
         {
@@ -209,11 +201,6 @@ namespace Calendar
             path.AddArc(0, control.Height - radius, radius, radius, 90, 90);
 
             control.Region = new Region(path);
-        }
-
-        private void TaskPage_Load(object sender, EventArgs e)
-        {
-            
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
