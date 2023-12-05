@@ -289,7 +289,7 @@ namespace Calendar
 
         private void helpButton_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("file:///D:/Semester_3/ApplicationDevelopment/ExamPractice_Chapter14/TimeFlow.pdf");
+            System.Diagnostics.Process.Start("..\\..\\..\\..\\TimeFlow.pdf");
         }
     }
 }
