@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
+using System.Drawing.Drawing2D;
 using Calendar;
 
 namespace Calendar
@@ -30,6 +31,7 @@ namespace Calendar
         public HomePage()
         {
             InitializeComponent();
+            //this.Paint += new PaintEventHandler(set_background);
             labelTransparent();
             dateDisplay.Text = DateTime.Today.ToLongDateString();
             timeDisplay.Text = DateTime.Now.ToLongTimeString();
@@ -177,5 +179,20 @@ namespace Calendar
         {
             welcomeLabel.Text += logInPage.username;
         }
+
+        private void set_background(Object sender, PaintEventArgs e)
+        {
+            Graphics graphics = e.Graphics;
+
+            //the rectangle, the same size as our Form
+            Rectangle gradient_rectangle = new Rectangle(0, 0, Width, Height);
+
+            //define gradient's properties
+            Brush b = new LinearGradientBrush(gradient_rectangle, Color.FromArgb(255, 255, 255), Color.FromArgb(71, 114, 250), 0f);
+
+            //apply gradient         
+            graphics.FillRectangle(b, gradient_rectangle);
+        }
+
     }
 }

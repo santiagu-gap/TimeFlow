@@ -155,25 +155,45 @@ namespace Calendar
                 int selectedIndex = categoriesList.SelectedIndices[i];
                 string categoryName = categoriesList.Items[selectedIndex].ToString();
 
+
                 // Remove the category from the checkedListBox
                 categoriesList.Items.RemoveAt(selectedIndex);
+
 
                 // Remove the category from the "Categories" table in the database
                 using (SQLiteConnection connection = new SQLiteConnection(sqlConnection))
                 {
                     connection.Open();
 
-                    // Assuming "CategoryName" and "UserId" are columns in the "Categories" table
-                    String sql = "DELETE FROM Categories WHERE CategoryId = @CategoryId";
 
-                    using (SQLiteCommand cmd = new SQLiteCommand(sql, connection))
+                    // Assuming "CategoryName" and "UserId" are columns in the "Categories" table
+                    String deleteCategorySql = "DELETE FROM Categories WHERE CategoryId = @CategoryId";
+
+
+                    using (SQLiteCommand deleteCategoryCmd = new SQLiteCommand(deleteCategorySql, connection))
                     {
                         int categoryId = categoryIdMap[categoryName + userId];
 
-                        cmd.Parameters.AddWithValue("@CategoryId", categoryId);
-                        cmd.ExecuteNonQuery();
+
+                        deleteCategoryCmd.Parameters.AddWithValue("@CategoryId", categoryId);
+                        deleteCategoryCmd.ExecuteNonQuery();
+                    }
+
+
+                    // Update the "Task" table to set CategoryId to -1 for tasks with the deleted category
+                    String updateTaskSql = "UPDATE Task SET CategoryId = -1 WHERE CategoryId = @CategoryId";
+
+
+                    using (SQLiteCommand updateTaskCmd = new SQLiteCommand(updateTaskSql, connection))
+                    {
+                        int categoryId = categoryIdMap[categoryName + userId];
+
+
+                        updateTaskCmd.Parameters.AddWithValue("@CategoryId", categoryId);
+                        updateTaskCmd.ExecuteNonQuery();
                     }
                 }
+
 
                 categoryIdMap.Remove(categoryName + userId);
             }

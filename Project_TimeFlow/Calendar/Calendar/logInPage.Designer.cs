@@ -63,7 +63,7 @@
             this.backgroundPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.backgroundPicture.Image = ((System.Drawing.Image)(resources.GetObject("backgroundPicture.Image")));
             this.backgroundPicture.Location = new System.Drawing.Point(232, 72);
-            this.backgroundPicture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.backgroundPicture.Margin = new System.Windows.Forms.Padding(2);
             this.backgroundPicture.Name = "backgroundPicture";
             this.backgroundPicture.Size = new System.Drawing.Size(940, 707);
             this.backgroundPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -75,7 +75,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(309, 155);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(112, 122);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -137,7 +137,7 @@
             // 
             this.logInUsernameTextBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logInUsernameTextBox.Location = new System.Drawing.Point(331, 406);
-            this.logInUsernameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.logInUsernameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.logInUsernameTextBox.Name = "logInUsernameTextBox";
             this.logInUsernameTextBox.Size = new System.Drawing.Size(326, 24);
             this.logInUsernameTextBox.TabIndex = 6;
@@ -146,7 +146,7 @@
             // 
             this.logInPasswordTextBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logInPasswordTextBox.Location = new System.Drawing.Point(331, 462);
-            this.logInPasswordTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.logInPasswordTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.logInPasswordTextBox.Name = "logInPasswordTextBox";
             this.logInPasswordTextBox.Size = new System.Drawing.Size(326, 24);
             this.logInPasswordTextBox.TabIndex = 7;
@@ -159,7 +159,7 @@
             this.logInButton.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logInButton.ForeColor = System.Drawing.Color.White;
             this.logInButton.Location = new System.Drawing.Point(331, 505);
-            this.logInButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.logInButton.Margin = new System.Windows.Forms.Padding(2);
             this.logInButton.Name = "logInButton";
             this.logInButton.Size = new System.Drawing.Size(325, 39);
             this.logInButton.TabIndex = 8;
@@ -174,7 +174,7 @@
             this.createAccountButton.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.createAccountButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(114)))), ((int)(((byte)(250)))));
             this.createAccountButton.Location = new System.Drawing.Point(749, 505);
-            this.createAccountButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.createAccountButton.Margin = new System.Windows.Forms.Padding(2);
             this.createAccountButton.Name = "createAccountButton";
             this.createAccountButton.Size = new System.Drawing.Size(325, 39);
             this.createAccountButton.TabIndex = 14;
@@ -186,7 +186,7 @@
             // 
             this.signUpPasswordTextBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signUpPasswordTextBox.Location = new System.Drawing.Point(749, 462);
-            this.signUpPasswordTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.signUpPasswordTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.signUpPasswordTextBox.Name = "signUpPasswordTextBox";
             this.signUpPasswordTextBox.Size = new System.Drawing.Size(326, 24);
             this.signUpPasswordTextBox.TabIndex = 13;
@@ -196,7 +196,7 @@
             // 
             this.signUpUsernameTextBox.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signUpUsernameTextBox.Location = new System.Drawing.Point(749, 406);
-            this.signUpUsernameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.signUpUsernameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.signUpUsernameTextBox.Name = "signUpUsernameTextBox";
             this.signUpUsernameTextBox.Size = new System.Drawing.Size(326, 24);
             this.signUpUsernameTextBox.TabIndex = 12;
@@ -294,7 +294,7 @@
             this.masterPanel.Controls.Add(this.pictureBox2);
             this.masterPanel.Controls.Add(this.backgroundPicture);
             this.masterPanel.Location = new System.Drawing.Point(0, 0);
-            this.masterPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.masterPanel.Margin = new System.Windows.Forms.Padding(2);
             this.masterPanel.Name = "masterPanel";
             this.masterPanel.Size = new System.Drawing.Size(1429, 843);
             this.masterPanel.TabIndex = 17;
@@ -344,7 +344,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1426, 839);
             this.Controls.Add(this.masterPanel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "logInPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TimeFlow";

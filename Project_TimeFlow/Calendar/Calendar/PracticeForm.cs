@@ -44,7 +44,7 @@ namespace Calendar
             if (sidebarExpand)
             {
                 sidebarFlowPanel.Width -= 10;
-                formContainer.Width += 10; // Expand the adjacent panel
+                //formContainer.Width += 10; // Expand the adjacent panel
 
                 if (sidebarFlowPanel.Width == sidebarFlowPanel.MinimumSize.Width)
                 {
@@ -55,7 +55,7 @@ namespace Calendar
             else
             {
                 sidebarFlowPanel.Width += 10;
-                formContainer.Width -= 10; // Contract the adjacent panel
+                //formContainer.Width -= 10; // Contract the adjacent panel
 
                 if (sidebarFlowPanel.Width == sidebarFlowPanel.MaximumSize.Width)
                 {
@@ -280,6 +280,16 @@ namespace Calendar
             resetIcons();
             matrixButton.Image = (Image)Properties.Resources.ResourceManager.GetObject("matrixWhite");
             matrixLabel.ForeColor = Color.White;
+        }
+
+        private void menuLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void helpButton_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("file:///D:/Semester_3/ApplicationDevelopment/ExamPractice_Chapter14/TimeFlow.pdf");
         }
     }
 }

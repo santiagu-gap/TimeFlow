@@ -209,3 +209,5 @@ C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Cale
 C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.csproj.CopyComplete
 C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.exe
 C:\Users\deadc\OneDrive\Documents\GitHub\Santiago\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.pdb
+C:\Users\2244969\Documents\GitHub\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.HomePage.resources
+C:\Users\2244969\Documents\GitHub\TimeFlow\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.homeTaskDisplay.resources
