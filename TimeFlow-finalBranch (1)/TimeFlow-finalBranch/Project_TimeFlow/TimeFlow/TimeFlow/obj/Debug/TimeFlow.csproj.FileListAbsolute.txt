@@ -1,0 +1,10 @@
+F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\TimeFlow\TimeFlow\bin\Debug\TimeFlow.exe.config
+F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\TimeFlow\TimeFlow\bin\Debug\TimeFlow.exe
+F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\TimeFlow\TimeFlow\bin\Debug\TimeFlow.pdb
+F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\TimeFlow\TimeFlow\obj\Debug\TimeFlow.csproj.AssemblyReference.cache
+F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\TimeFlow\TimeFlow\obj\Debug\TimeFlow.Properties.Resources.resources
+F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\TimeFlow\TimeFlow\obj\Debug\TimeFlow.csproj.GenerateResource.cache
+F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\TimeFlow\TimeFlow\obj\Debug\TimeFlow.csproj.CoreCompileInputs.cache
+F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\TimeFlow\TimeFlow\obj\Debug\TimeFlow.exe
+F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\TimeFlow\TimeFlow\obj\Debug\TimeFlow.pdb
+F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\TimeFlow\TimeFlow\obj\Debug\TimeFlow.MainScreen.resources

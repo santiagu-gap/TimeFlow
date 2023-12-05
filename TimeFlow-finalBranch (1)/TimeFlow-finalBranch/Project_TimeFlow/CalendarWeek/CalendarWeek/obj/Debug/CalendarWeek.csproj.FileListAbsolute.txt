@@ -1,0 +1,12 @@
+F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\CalendarWeek\CalendarWeek\obj\Debug\CalendarWeek.csproj.AssemblyReference.cache
+F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\CalendarWeek\CalendarWeek\obj\Debug\CalendarWeek.Form1.resources
+F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\CalendarWeek\CalendarWeek\obj\Debug\CalendarWeek.Properties.Resources.resources
+F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\CalendarWeek\CalendarWeek\obj\Debug\CalendarWeek.UserControlWeekBlankDay.resources
+F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\CalendarWeek\CalendarWeek\obj\Debug\CalendarWeek.UserControlWeekDay.resources
+F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\CalendarWeek\CalendarWeek\obj\Debug\CalendarWeek.csproj.GenerateResource.cache
+F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\CalendarWeek\CalendarWeek\obj\Debug\CalendarWeek.csproj.CoreCompileInputs.cache
+F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\CalendarWeek\CalendarWeek\bin\Debug\CalendarWeek.exe.config
+F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\CalendarWeek\CalendarWeek\bin\Debug\CalendarWeek.exe
+F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\CalendarWeek\CalendarWeek\bin\Debug\CalendarWeek.pdb
+F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\CalendarWeek\CalendarWeek\obj\Debug\CalendarWeek.exe
+F:\Semester_3\ApplicationDevelopment\Project_TimeFlow\CalendarWeek\CalendarWeek\obj\Debug\CalendarWeek.pdb
