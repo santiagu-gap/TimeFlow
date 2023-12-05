@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="sidebarTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="menuIcon.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -229,7 +232,7 @@
   <data name="homeIcon.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAESxJREFUeF7t1gmW5VhuRMHe/6alVvU96pqiMgaQBEmzBWR8OvwB+S8AAAAAAAAA
+        vAAADrwBlbxySQAAESxJREFUeF7t1gmW5VhuRMHe/6alVvU96pqiMgaQBEmzBWR8OvwB+S8AAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAMb8z8H6MwDA2brF6/TzAIAJ3dfb6ecDAJ/R/XycPg8A+D/dx9fp8wHg
         PbqBpFgA4Jm6d3ygmADg/rptfFHxAcC9dMf4oeIEgN26WwwrXgDYpTvFCYocAK7TTeICjQAAztMN4mKN
@@ -1159,9 +1162,6 @@
         dThR+RMl1i3WMdaVX9MDrfaKV/x/ofM6om4E7zgAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="sidebarTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>36</value>
   </metadata>

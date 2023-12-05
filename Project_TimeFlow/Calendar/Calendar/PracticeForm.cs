@@ -35,6 +35,7 @@ namespace Calendar
             sidebarFlowPanel.Size = new Size(sidebarFlowPanel.MinimumSize.Width, sidebarFlowPanel.Height);
             //formContainer.Dock = DockStyle.Fill;
             //formContainer.Size = new Size(formContainer.MaximumSize.Width, formContainer.MaximumSize.Height);
+            loadForm(new HomePage());
 
         }
 
@@ -152,6 +153,12 @@ namespace Calendar
                 calendarIcon.Image = (Image)Properties.Resources.ResourceManager.GetObject("calendarHover");
                 calendarLabel.ForeColor = Color.FromArgb(196, 216, 255);
             }
+
+            if (pictureBox != null && matrixSelected == false && pictureBox.Equals(matrixButton))
+            {
+                matrixButton.Image = (Image)Properties.Resources.ResourceManager.GetObject("matrixHover");
+                matrixLabel.ForeColor = Color.FromArgb(196, 216, 255);
+            }
         }
 
 
@@ -184,7 +191,13 @@ namespace Calendar
                 calendarIcon.Image = (Image)Properties.Resources.ResourceManager.GetObject("calendarBlue");
                 calendarLabel.ForeColor = Color.FromArgb(179, 197, 249);
             }
-                
+
+            if (pictureBox != null && matrixSelected == false && pictureBox.Equals(matrixButton))
+            {
+                matrixButton.Image = (Image)Properties.Resources.ResourceManager.GetObject("matrixBlue");
+                matrixLabel.ForeColor = Color.FromArgb(179, 197, 249);
+            }
+
 
         }
 
@@ -228,6 +241,7 @@ namespace Calendar
 
         private void homeIcon_Click(object sender, EventArgs e)
         {
+            loadForm(new HomePage());
             tasksSelected = false;
             homeSelected = true;
             calendarSelected = false;

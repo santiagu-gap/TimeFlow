@@ -142,8 +142,14 @@
   <data name="homeWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\homeWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="image2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="matrixBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\matrixBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="matrixHover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\matrixHover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="matrixWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\matrixWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

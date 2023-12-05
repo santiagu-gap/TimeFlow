@@ -39,9 +39,5 @@ namespace Calendar
 
         }
 
-        private void taskName_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
