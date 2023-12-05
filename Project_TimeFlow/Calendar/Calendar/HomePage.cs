@@ -82,7 +82,7 @@ namespace Calendar
 
                                     if (todaysDate.ToShortDateString() == shortTime.ToShortDateString())
                                     {
-                                        TaskDisplay taskBox = new TaskDisplay(taskName, shortTime.ToShortDateString());
+                                        homeTaskDisplay taskBox = new homeTaskDisplay(taskName, shortTime.ToShortDateString());
                                         taskBox.setData();
                                         taskDisplayContainer.Controls.Add(taskBox);
                                     }

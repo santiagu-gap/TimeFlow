@@ -151,6 +151,12 @@
     <Compile Include="TaskPreviewWindow.Designer.cs">
       <DependentUpon>TaskPreviewWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="homeTaskDisplay..cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="homeTaskDisplay..Designer.cs">
+      <DependentUpon>homeTaskDisplay..cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlBlankDay.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage.resx">
       <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="homeTaskDisplay..resx">
+      <DependentUpon>homeTaskDisplay..cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="logInPage.resx">
       <DependentUpon>logInPage.cs</DependentUpon>

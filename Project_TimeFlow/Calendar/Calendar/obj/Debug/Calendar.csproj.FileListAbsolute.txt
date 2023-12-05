@@ -174,3 +174,4 @@ F:\Semester_3\ApplicationDevelopment\ExamPractice_Chapter14\Project_TimeFlow\Cal
 F:\Semester_3\ApplicationDevelopment\ExamPractice_Chapter14\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.exe
 F:\Semester_3\ApplicationDevelopment\ExamPractice_Chapter14\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.pdb
 F:\Semester_3\ApplicationDevelopment\ExamPractice_Chapter14\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.HomePage.resources
+F:\Semester_3\ApplicationDevelopment\ExamPractice_Chapter14\Project_TimeFlow\Calendar\Calendar\obj\Debug\Calendar.homeTaskDisplay.resources
