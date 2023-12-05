@@ -88,6 +88,8 @@ namespace Calendar
             {
                 SaveUser(signUpUsername, signUpPassword);
                 MessageBox.Show("Account has been created!", "Create Account", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                signUpUsernameTextBox.Clear();
+                signUpPasswordTextBox.Clear();
             }
             else
             {
