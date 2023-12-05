@@ -16,6 +16,8 @@ namespace Calendar
     {
         String sqlConnection = "Data Source=..\\..\\..\\..\\Database\\tasksDB.db;Version=3;";
 
+        public static List<int> selectedTasks = new List<int>();
+
         public TaskPage()
         {
             InitializeComponent();
@@ -112,9 +114,9 @@ namespace Calendar
             }
             try
             {
-                TaskDisplay taskBox = new TaskDisplay(taskTitleTextbox.Text, deadline);
-                taskBox.setData();
-                taskListFlowPanel.Controls.Add(taskBox);
+                //TaskDisplay taskBox = new TaskDisplay(taskTitleTextbox.Text, deadline);
+                //taskBox.setData();
+                //taskListFlowPanel.Controls.Add(taskBox);
                 taskDateTimePicker.MinDate = DateTime.Now;
 
 
@@ -166,7 +168,7 @@ namespace Calendar
                                     shortTime = DateTime.Parse(dueDate);
 
 
-                                    TaskDisplay taskBox = new TaskDisplay(taskName, shortTime.ToShortDateString());
+                                    TaskDisplay taskBox = new TaskDisplay(taskName, shortTime.ToShortDateString(), ID);
                                     taskBox.setData();
                                     taskListFlowPanel.Controls.Add(taskBox);
 
@@ -213,6 +215,59 @@ namespace Calendar
         {
             
         }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            if (selectedTasks.Count > 0)
+            {
+                using (SQLiteConnection connection = new SQLiteConnection(sqlConnection))
+                {
+                    connection.Open();
+
+                    using (SQLiteTransaction transaction = connection.BeginTransaction())
+                    {
+                        try
+                        {
+                            // Create a parameterized SQL query to delete tasks based on TaskID
+                            string deleteSql = "DELETE FROM Task WHERE TaskID IN (" +
+                                               string.Join(",", selectedTasks) +
+                                               ") AND UserId = @UserId";
+
+                            using (SQLiteCommand deleteCommand = new SQLiteCommand(deleteSql, connection, transaction))
+                            {
+                                deleteCommand.Parameters.AddWithValue("@UserId", logInPage.userID);
+                                deleteCommand.ExecuteNonQuery();
+                            }
+
+                            transaction.Commit();
+                        }
+                        catch (Exception ex)
+                        {
+                            // Handle exceptions appropriately
+                            MessageBox.Show($"Error: {ex.Message}");
+                            transaction.Rollback(); // Rollback the transaction if an error occurs
+                        }
+                        finally
+                        {
+                            connection.Close(); // Ensure the connection is closed even if an exception occurs
+                        }
+                    }
+                }
+
+                // Clear the selectedTasks list
+                selectedTasks.Clear();
+
+                // Optionally, update the UI or perform other actions after deletion
+                // For example, you may want to reload the data or update the task list display
+                taskListFlowPanel.Controls.Clear(); // Clear existing controls
+                dataOnLoad(); // Reload data and update the display
+            }
+            else
+            {
+                MessageBox.Show("No tasks selected for deletion.");
+            }
+        }
+
     }
 
 }
